@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "wizardry_delight:block/apple_planks"
+  }
+}

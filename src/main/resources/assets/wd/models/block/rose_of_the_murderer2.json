@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "wizardry_delight:block/rose_of_the_murderer2"
+  },
+  "render_type": "cutout"
+}

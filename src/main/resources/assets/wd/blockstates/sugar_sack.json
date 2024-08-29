@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "wd:block/sugar_sack"
+    },
+    "facing=east": {
+      "model": "wd:block/sugar_sack",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "wd:block/sugar_sack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wd:block/sugar_sack",
+      "y": 270
+    }
+  }
+}

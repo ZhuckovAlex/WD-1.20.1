@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wd:block/freeze_berries2"
+  },
+  "render_type": "cutout"
+}

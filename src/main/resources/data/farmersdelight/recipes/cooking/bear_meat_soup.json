@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "wd:raw_bear_meat"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "wd:bear_meat_soup"
+  }
+}

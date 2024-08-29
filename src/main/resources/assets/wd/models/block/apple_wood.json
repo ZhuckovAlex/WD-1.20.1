@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "wizardry_delight:block/apple_log",
+    "side": "wizardry_delight:block/apple_log"
+  }
+}

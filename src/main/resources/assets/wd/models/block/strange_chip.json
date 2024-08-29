@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "up": "wizardry_delight:block/strange_chip_top",
+    "down": "wizardry_delight:block/strange_chip_bottom",
+    "side": "wizardry_delight:block/strange_chip_side"
+  }
+}

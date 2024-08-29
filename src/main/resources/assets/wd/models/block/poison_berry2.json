@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wd:block/poison_berry2"
+  },
+  "render_type": "translucent"
+}

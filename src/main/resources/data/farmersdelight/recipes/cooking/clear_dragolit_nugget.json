@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "wizardry_delight:strange_scrap"
+    },
+    {
+      "item": "wizardry_delight:strange_scrap"
+    },
+    {
+      "item": "wizardry_delight:strange_scrap"
+    },
+    {
+      "item": "farmersdelight:milk_bottle"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "recipe_book_tab": "clear_dragolit_nugget",
+  "result": {
+    "item": "wizardry_delight:clear_dragolit_nugget",
+    "count": 3
+  }
+}

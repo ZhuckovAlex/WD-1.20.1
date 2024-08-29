@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "a_block_of_sparkling_pollen",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wizardry_delight:dragolit_ingot"
+    }
+  },
+  "result": {
+    "item": "wizardry_delight:dragolit_grid",
+    "count": 16
+  }
+}

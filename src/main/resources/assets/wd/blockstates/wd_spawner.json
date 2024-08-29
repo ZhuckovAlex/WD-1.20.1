@@ -1,0 +1,347 @@
+{
+  "variants":
+    {
+    "soul_stone_charges=0,pollen_charges=0,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_0"
+    },
+    "soul_stone_charges=0,pollen_charges=1,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_1"
+    },
+    "soul_stone_charges=0,pollen_charges=2,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_2"
+    },
+    "soul_stone_charges=0,pollen_charges=3,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_3"
+    },
+    "soul_stone_charges=0,pollen_charges=4,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_4"
+    },
+    "soul_stone_charges=0,pollen_charges=5,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_5"
+    },
+    "soul_stone_charges=1,pollen_charges=0,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_0"
+    },
+    "soul_stone_charges=1,pollen_charges=1,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_1"
+    },
+    "soul_stone_charges=1,pollen_charges=2,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_2"
+    },
+    "soul_stone_charges=1,pollen_charges=3,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_3"
+    },
+    "soul_stone_charges=1,pollen_charges=4,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_4"
+    },
+    "soul_stone_charges=1,pollen_charges=5,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_5"
+    },
+    "soul_stone_charges=2,pollen_charges=0,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_0"
+    },
+    "soul_stone_charges=2,pollen_charges=1,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_1"
+    },
+    "soul_stone_charges=2,pollen_charges=2,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_2"
+    },
+    "soul_stone_charges=2,pollen_charges=3,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_3"
+    },
+    "soul_stone_charges=2,pollen_charges=4,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_4"
+    },
+    "soul_stone_charges=2,pollen_charges=5,facing=north":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_5"
+    },
+    "soul_stone_charges=0,pollen_charges=0,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_0",
+      "y": 90
+    },
+    "soul_stone_charges=0,pollen_charges=1,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_1",
+      "y": 90
+    },
+    "soul_stone_charges=0,pollen_charges=2,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_2",
+      "y": 90
+    },
+    "soul_stone_charges=0,pollen_charges=3,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_3",
+      "y": 90
+    },
+    "soul_stone_charges=0,pollen_charges=4,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_4",
+      "y": 90
+    },
+    "soul_stone_charges=0,pollen_charges=5,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_0_5",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=0,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_0",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=1,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_1",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=2,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_2",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=3,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_3",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=4,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_4",
+      "y": 90
+    },
+    "soul_stone_charges=1,pollen_charges=5,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_1_5",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=0,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_0",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=1,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_1",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=2,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_2",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=3,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_3",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=4,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_4",
+      "y": 90
+    },
+    "soul_stone_charges=2,pollen_charges=5,facing=east":
+    {
+      "model": "wizardry_delight:block/wd_spawner_2_5",
+      "y": 90
+    },
+      "soul_stone_charges=0,pollen_charges=0,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_0",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=1,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_1",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=2,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_2",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=3,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_3",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=4,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_4",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=5,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_5",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=0,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_0",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=1,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_1",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=2,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_2",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=3,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_3",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=4,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_4",
+        "y": 270
+      },
+      "soul_stone_charges=1,pollen_charges=5,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_5",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=0,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_0",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=1,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_1",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=2,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_2",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=3,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_3",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=4,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_4",
+        "y": 270
+      },
+      "soul_stone_charges=2,pollen_charges=5,facing=west":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_5",
+        "y": 270
+      },
+      "soul_stone_charges=0,pollen_charges=0,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_0",
+        "y": 180
+      },
+      "soul_stone_charges=0,pollen_charges=1,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_1",
+        "y": 180
+      },
+      "soul_stone_charges=0,pollen_charges=2,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_2",
+        "y": 180
+      },
+      "soul_stone_charges=0,pollen_charges=3,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_3",
+        "y": 180
+      },
+      "soul_stone_charges=0,pollen_charges=4,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_4",
+        "y": 180
+      },
+      "soul_stone_charges=0,pollen_charges=5,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_0_5",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=0,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_0",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=1,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_1",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=2,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_2",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=3,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_3",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=4,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_4",
+        "y": 180
+      },
+      "soul_stone_charges=1,pollen_charges=5,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_1_5",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=0,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_0",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=1,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_1",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=2,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_2",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=3,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_3",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=4,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_4",
+        "y": 180
+      },
+      "soul_stone_charges=2,pollen_charges=5,facing=south":
+      {
+        "model": "wizardry_delight:block/wd_spawner_2_5",
+        "y": 180
+      }
+    }
+}

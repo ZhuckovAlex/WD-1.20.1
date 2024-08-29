@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 0.50,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "farmersdelight:cabbage_leaf"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "wd:cleaned_turtle_neck"
+    }
+  ],
+  "recipe_book_tab": "turtle_soup",
+  "result": {
+    "item": "wd:turtle_soup"
+  }
+}

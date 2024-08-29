@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:glowing_jam"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "robin_stick",
+  "key": {
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "B": {
+      "item": "wizardry_delight:dragolit_ingot"
+    },
+    "C": {
+      "item": "wizardry_delight:sparkling_pollen"
+    }
+  },
+  "pattern": [
+    "CAC",
+    "B B",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "item": "wizardry_delight:ring_supply"
+  }
+}

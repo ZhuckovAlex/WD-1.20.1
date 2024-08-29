@@ -1,0 +1,55 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 3,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    [
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "tag": "forge:crops/cabbage"
+    },
+    {
+      "item": "minecraft:beetroot"
+    }
+    ],
+    [
+      {
+        "item": "farmersdelight:onion"
+      },
+      {
+        "item": "minecraft:carrot"
+      },
+      {
+        "item": "minecraft:potato"
+      },
+      {
+        "tag": "forge:crops/cabbage"
+      },
+      {
+        "item": "minecraft:beetroot"
+      }
+    ],
+    {
+      "item": "farmersdelight:bone_broth"
+    },
+    {
+      "item": "wd:raw_bear_meat"
+    }
+  ],
+  "recipe_book_tab": "goulash_with_goat_meat",
+  "result": {
+    "item": "wd:soup_from_bear",
+    "count": 1
+  }
+}

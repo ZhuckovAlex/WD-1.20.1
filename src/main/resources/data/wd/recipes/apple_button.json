@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "wizardry_delight:apple_planks"
+    }
+  ],
+  "result": {
+    "item": "wizardry_delight:apple_button"
+  }
+}

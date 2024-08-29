@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "wd:cocked_goats_meat"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "wd:cocked_slising_goats_meat"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

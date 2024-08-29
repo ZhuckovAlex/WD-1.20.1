@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wizardry_delight:block/apple_slab"
+    },
+    "type=double": {
+      "model": "wizardry_delight:block/apple_planks"
+    },
+    "type=top": {
+      "model": "wizardry_delight:block/apple_slab_top"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "warped_wart_block",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "wd:sugar_sack",
+    "count": 1
+  }
+}

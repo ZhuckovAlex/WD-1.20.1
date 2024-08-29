@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:soul_sand_valley",
+  "features": "wd:rose_tears",
+  "step": "surface_structures"
+}

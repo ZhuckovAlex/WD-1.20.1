@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "wd:shulker_boxes"
+    },
+    {
+      "item": "wd:cleansing_decoction"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:shulker_box"
+  }
+}

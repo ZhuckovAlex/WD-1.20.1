@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sparkling_pollen",
+  "ingredients": [
+    {
+      "item": "wd:a_block_of_sparkling_pollen"
+    }
+  ],
+  "result": {
+    "item": "wd:sparkling_pollen",
+    "count": 9
+  }
+}

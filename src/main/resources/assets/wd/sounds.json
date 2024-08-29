@@ -1,0 +1,61 @@
+{
+  "nyamnyam": {
+    "subtitle": "sounds.wd.nyamnyam",
+    "sounds": [
+      {
+        "name": "wd:nyamnyam"
+      },
+      {
+        "name": "wd:nyamnyam1"
+      },
+      {
+        "name": "wd:nyamnyam2"
+      }
+    ]
+  },
+  "golden_flower": {
+    "subtitle": "sounds.wd.golden_flower",
+    "sounds": [
+      {
+        "name": "wd:golden_flower"
+      },
+      {
+        "name": "wd:golden_flower1"
+      },
+      {
+        "name": "wd:golden_flower2"
+      }
+    ]
+  },
+  "nyamnyam_end": {
+    "subtitle": "sounds.wd.nyamnyam",
+    "sounds": [
+      {
+        "name": "wd:nyamnyam_end"
+      },
+      {
+        "name": "wd:nyamnyam_end1"
+      },
+      {
+        "name": "wd:nyamnyam_end2"
+      }
+    ]
+  },
+  "robin_stick": {
+    "subtitle": "sounds.wd.robin_stick",
+    "sounds": [
+      {
+        "name": "wd:robin_stick"
+      }
+    ]
+  },
+  "wd_jam": {
+    "subtitle": "sounds.wd.wd_jam",
+    "sounds": [
+      {
+       "name": "wd:wd_jam",
+       "stream": true
+      }
+    ]
+  }
+}

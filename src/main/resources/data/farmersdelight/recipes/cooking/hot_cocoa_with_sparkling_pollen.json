@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 3,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "wd:sparkling_pollen"
+    }
+  ],
+  "recipe_book_tab": "hot_cocoa_with_sparkling_pollen",
+  "result": {
+    "item": "wd:hot_cocoa_with_sparkling_pollen",
+    "count": 1
+  }
+}

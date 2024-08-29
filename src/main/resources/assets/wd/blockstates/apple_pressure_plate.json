@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "wizardry_delight:block/apple_pressure_plate"
+    },
+    "powered=true": {
+      "model": "wizardry_delight:block/apple_pressure_plate_down"
+    }
+  }
+}

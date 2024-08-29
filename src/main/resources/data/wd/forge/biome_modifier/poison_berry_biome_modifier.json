@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_swamp",
+  "features": "wd:poison_berry",
+  "step": "surface_structures"
+}

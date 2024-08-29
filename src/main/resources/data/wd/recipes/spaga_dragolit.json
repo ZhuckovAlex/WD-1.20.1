@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "rapier",
+  "key": {
+    "A": {
+      "item": "minecraft:lime_wool"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "wizardry_delight:sparkling_pollen"
+    },
+    "#": {
+      "item": "wizardry_delight:dragolit_ingot"
+    }
+  },
+  "pattern": [
+    " C#",
+    "A#C",
+    "BA "
+  ],
+  "result": {
+    "count": 1,
+    "item": "wizardry_delight:spaga_dragolit"
+  }
+}

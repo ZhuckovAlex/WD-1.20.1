@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wd:item/roast_goat_meat_with_freeze_berries_syrup"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "wizardry_delight:block/wd_spawner_side",
+    "up": "wizardry_delight:block/wd_spawner_top_5",
+    "north": "wizardry_delight:block/wd_spawner_tied_1",
+    "east": "wizardry_delight:block/wd_spawner_side",
+    "south": "wizardry_delight:block/wd_spawner_side",
+    "west": "wizardry_delight:block/wd_spawner_side",
+    "particle": "wizardry_delight:block/wd_spawner_side"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "wizardry_delight:block/stripped_apple_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "wizardry_delight:block/stripped_apple_log"
+    },
+    "axis=z": {
+      "model": "wizardry_delight:block/stripped_apple_log_horizontal",
+      "x": 90
+    }
+  }
+}

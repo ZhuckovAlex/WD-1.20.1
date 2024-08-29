@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 5.3,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "ingredients": [
+    {
+      "item": "wizardry_delight:silveran"
+    },
+    {
+      "item": "wizardry_delight:a_drop_of_love"
+    },
+    {
+      "item": "wizardry_delight:meadow_golden_flower"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "wizardry_delight:sugar_refined"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wizardry_delight:healing_dew",
+    "count": 3
+  }
+}

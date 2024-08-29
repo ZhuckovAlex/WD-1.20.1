@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wd:block/charming_berries3"
+  },
+  "render_type": "translucent"
+}

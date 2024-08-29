@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 800,
+  "experience": 0.50,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "wd:freeze_berries"
+    },
+    {
+      "item": "wd:freeze_berries"
+    },
+    {
+      "item": "wd:freeze_berries"
+    },
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "item": "minecraft:powder_snow_bucket"
+    },
+    {
+      "item": "wd:sugar_refined"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:freeze_jam"
+  }
+}

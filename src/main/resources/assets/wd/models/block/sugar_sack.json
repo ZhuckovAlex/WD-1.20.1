@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "wd:block/sugar_sack_bottom",
+    "up": "wd:block/sugar_sack_top",
+    "north": "wd:block/sugar_sack_side",
+    "east": "wd:block/sugar_sack_side_tied",
+    "south": "wd:block/sugar_sack_side",
+    "west": "wd:block/sugar_sack_side",
+    "particle": "wd:block/sugar_sack_side"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:plains",
+  "features": "wd:meadow_flower",
+  "step": "surface_structures"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "minecraft:mushrooms"
+    },
+    {
+      "tag": "minecraft:mushrooms"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "wd:mushroom_on_stick"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "wd:block/charming_berries0"
+    },
+    "age=1": {
+      "model": "wd:block/charming_berries1"
+    },
+    "age=2": {
+      "model": "wd:block/charming_berries2"
+    },
+    "age=3": {
+      "model": "wd:block/charming_berries3"
+    }
+  }
+}

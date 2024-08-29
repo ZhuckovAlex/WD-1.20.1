@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 3,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "wd:silveran"
+    },
+    {
+      "item": "wd:freeze_jam"
+    },
+    {
+      "item": "wd:raw_goats_meat"
+    }
+  ],
+  "recipe_book_tab": "roast_goat_meat_with_freeze_berries_syrup",
+  "result": {
+    "item": "wd:roast_goat_meat_with_freeze_berries_syrup",
+    "count": 1
+  }
+}

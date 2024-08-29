@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sweet_roll",
+  "pattern": [
+    "SLS",
+    "HRH",
+    "TBT"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "H": {
+      "item": "minecraft:honey_bottle"
+    },
+    "L": {
+      "item": "wd:a_drop_of_love"
+    },
+    "T": {
+      "item": "farmersdelight:wheat_dough"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "R": {
+      "item": "wd:sugar_refined"
+    }
+  },
+  "result": {
+    "count": 2,
+    "item": "wd:sweet_roll"
+  }
+}

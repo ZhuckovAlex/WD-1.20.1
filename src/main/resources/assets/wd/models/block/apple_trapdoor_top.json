@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "wizardry_delight:block/apple_trapdoor"
+  },  "render_type": "cutout"
+}

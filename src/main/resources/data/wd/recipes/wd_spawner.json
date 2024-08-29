@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "a_block_of_sparkling_pollen",
+  "pattern": [
+    "PGP",
+    "GLG",
+    "PGP"
+  ],
+  "key": {
+    "G": {
+      "item": "wizardry_delight:dragolit_grid"
+    },
+    "P": {
+      "item": "wizardry_delight:sparkling_pollen"
+    },
+    "L": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "result": {
+    "item": "wizardry_delight:wd_spawner",
+    "count": 1
+  }
+}

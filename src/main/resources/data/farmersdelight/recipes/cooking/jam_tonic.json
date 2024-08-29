@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 2400,
+  "experience": 2.0,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:jam_tonic",
+    "count": 3
+  }
+}

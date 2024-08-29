@@ -1,0 +1,21 @@
+{
+    "textures": {
+        "particle": "wd:block/wizard_pie_side",
+        "bottom": "wd:block/wizard_pie_bottom",
+        "top": "wd:block/wizard_pie_top",
+        "side": "wd:block/wizard_pie_side"
+    },
+    "elements": [
+        {   "from": [ 1, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#side" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

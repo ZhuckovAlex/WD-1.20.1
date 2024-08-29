@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 0.50,
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "wd:cleaned_turtle_neck"
+    },
+    {
+      "item": "wd:handful_yadoga"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:pickled_turtle_neck"
+  }
+}

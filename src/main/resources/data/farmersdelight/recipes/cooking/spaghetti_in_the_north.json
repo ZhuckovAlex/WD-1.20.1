@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 0.5,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "tag": "forge:crops/cabbage"
+    },
+    {
+      "item": "wd:raw_bear_meat"
+    }
+  ],
+  "recipe_book_tab": "spaghetti_in_the_north",
+  "result": {
+    "item": "wd:spaghetti_in_the_north",
+    "count": 1
+  }
+}

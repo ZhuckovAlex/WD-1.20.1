@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "wizardry_delight:block/rose_of_ghosty_tears"
+  }, "render_type": "cutout"
+}

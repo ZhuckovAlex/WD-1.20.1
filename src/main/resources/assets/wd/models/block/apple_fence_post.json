@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "wizardry_delight:block/apple_planks"
+  }
+}

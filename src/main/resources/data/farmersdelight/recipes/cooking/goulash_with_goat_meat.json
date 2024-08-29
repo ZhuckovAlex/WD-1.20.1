@@ -1,0 +1,41 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 3,
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    [
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "tag": "forge:crops/cabbage"
+    },
+    {
+      "tag": "minecraft:mushrooms"
+    },
+    {
+      "item": "minecraft:beetroot"
+    }
+    ],
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "item": "wd:raw_slising_goats_meat"
+    }
+  ],
+  "recipe_book_tab": "goulash_with_goat_meat",
+  "result": {
+    "item": "wd:goulash_with_goat_meat",
+    "count": 1
+  }
+}

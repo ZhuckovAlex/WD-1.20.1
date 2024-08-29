@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 0.20,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "item": "wd:sugar_refined"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:sweet_jam"
+  }
+}

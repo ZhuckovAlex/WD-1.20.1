@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "hat_helmet",
+  "ingredients": [
+    {
+      "item": "wizardry_delight:glowing_jam"
+    },
+    {
+      "item": "wizardry_delight:hat_helmet_clear"
+    }
+  ],
+  "result": {
+    "item": "wizardry_delight:hat_helmet",
+    "count": 1
+  }
+}

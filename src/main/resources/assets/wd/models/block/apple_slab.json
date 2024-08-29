@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "wizardry_delight:block/apple_planks",
+    "side": "wizardry_delight:block/apple_planks",
+    "top": "wizardry_delight:block/apple_planks"
+  }
+}

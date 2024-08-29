@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wizardry_delight:block/coastal_steep"
+  }
+}

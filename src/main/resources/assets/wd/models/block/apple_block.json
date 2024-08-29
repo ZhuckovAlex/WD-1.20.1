@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wizardry_delight:block/apple_block"
+  },"render_type": "cutout"
+}

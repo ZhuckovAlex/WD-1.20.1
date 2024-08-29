@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "robin_stick",
+  "ingredients": [
+    {
+      "item": "wizardry_delight:ring_supply_discharged"
+    },
+    {
+      "item": "wizardry_delight:soul_stone_charged"
+    }
+  ],
+  "result": {
+    "item": "wizardry_delight:ring_supply",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 800,
+  "experience": 0.50,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "wd:poison_berry"
+    },
+    {
+      "item": "wd:poison_berry"
+    },
+    {
+      "item": "wd:poison_berry"
+    },
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "wd:sugar_refined"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:poison_berry_jam"
+  }
+}

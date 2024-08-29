@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "chest_boat",
+  "ingredients": [
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "farmersdelight:apple_cider"
+    },
+    {
+      "item": "minecraft:flower_pot"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    },
+    {
+      "item": "wizardry_delight:raw_slising_goats_meat"
+    }
+
+  ],
+  "result": {
+    "item": "wizardry_delight:not_pickled_shish_kebab",
+    "count": 1
+  }
+}

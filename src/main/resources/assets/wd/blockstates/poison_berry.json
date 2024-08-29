@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "wd:block/poison_berry0"
+    },
+    "age=1": {
+      "model": "wd:block/poison_berry1"
+    },
+    "age=2": {
+      "model": "wd:block/poison_berry2"
+    },
+    "age=3": {
+      "model": "wd:block/poison_berry3"
+    }
+  }
+}

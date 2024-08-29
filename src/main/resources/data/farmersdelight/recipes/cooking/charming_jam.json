@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 800,
+  "experience": 0.50,
+  "container": {
+    "item": "wd:jar"
+  },
+  "ingredients": [
+    {
+      "item": "wd:charming_berries"
+    },
+    {
+      "item": "wd:charming_berries"
+    },
+    {
+      "item": "wd:charming_berries"
+    },
+    {
+      "item": "wd:sugar_refined"
+    },
+    {
+      "tag": "minecraft:candles"
+    },
+    {
+      "item": "wd:sugar_refined"
+    }
+  ],
+  "recipe_book_tab": "jam",
+  "result": {
+    "item": "wd:charming_jam"
+  }
+}

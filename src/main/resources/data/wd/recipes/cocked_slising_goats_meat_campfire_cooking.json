@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "wd:raw_slising_goats_meat"
+  },
+  "result": "wd:cocked_slising_goats_meat"
+}

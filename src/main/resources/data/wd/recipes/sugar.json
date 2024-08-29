@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "warped_wart",
+  "ingredients": [
+    {
+      "item": "wd:sugar_sack"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar",
+    "count": 9
+  }
+}

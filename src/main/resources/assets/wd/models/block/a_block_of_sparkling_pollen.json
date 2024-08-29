@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "wd:block/a_block_of_sparkling_pollen"
+  }
+}
