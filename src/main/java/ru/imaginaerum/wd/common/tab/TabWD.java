@@ -80,6 +80,10 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.COASTAL_STEEP_FLOWER.get());
                         pOutput.accept(ItemsWD.FLAME_ARROW.get());
                         pOutput.accept(ItemsWD.CHARMING_BERRIES.get());
+                        pOutput.accept(ItemsWD.SOUL_STONE.get());
+                        pOutput.accept(ItemsWD.ROSE_OF_THE_MURDERER.get());
+                        pOutput.accept(ItemsWD.ROTTEN_PIE.get());
+                        pOutput.accept(ItemsWD.WIZARD_PIE_SLICE.get());
 
 
 
@@ -93,10 +97,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(BlocksWD.MEADOW_GOLDEN_FLOWER.get());
                         pOutput.accept(BlocksWD.ROSE_OF_GHOSTY_TEARS.get());
                         pOutput.accept(BlocksWD.WIZARD_PIE.get());
+
                     })
                     .build());
 
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TABS.register(eventBus);
-    }
 }

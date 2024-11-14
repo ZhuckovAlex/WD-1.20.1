@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "rotten_pie",
+  "key": {
+    "A": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "B": {
+      "item": "minecraft:wheat"
+    },
+    "C": {
+      "item": "minecraft:glow_lichen"
+    },
+    "#": {
+      "item": "wd:poison_berry"
+    },
+    "D": {
+      "item": "wd:sugar_refined"
+    },
+    "E": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "pattern": [
+    "C#C",
+    "DED",
+    "BAB"
+  ],
+  "result": {
+    "count": 1,
+    "item": "wd:rotten_pie"
+  }
+}

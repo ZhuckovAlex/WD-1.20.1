@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "wizardry_delight:block/rose_of_the_murderer"
+    "is_soul=false": {
+      "model": "wd:block/rose_of_the_murderer"
+    },
+    "is_soul=true": {
+      "model": "wd:block/rose_of_the_murderer2"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "wd:block/pink_candle_wizard_pie"
+    },
+    "lit=true": {
+      "model": "wd:block/pink_candle_wizard_pie_lit"
+    }
+  }
+}

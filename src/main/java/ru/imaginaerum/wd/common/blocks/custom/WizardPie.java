@@ -5,16 +5,21 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CakeBlock;
+import net.minecraft.world.level.block.CandleBlock;
+import net.minecraft.world.level.block.CandleCakeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -32,12 +37,29 @@ public class WizardPie extends CakeBlock {
                 p_222946_.setBlock(p_222947_, p_222945_.setValue(BITES, Integer.valueOf(i - 1)), 3);
         }
     }
-    public InteractionResult use(BlockState p_51202_, Level p_51203_, BlockPos p_51204_, Player p_51205_, InteractionHand p_51206_, BlockHitResult p_51207_) {
-        ItemStack itemstack = p_51205_.getItemInHand(p_51206_);
-        p_51203_.playSound((Player)null, p_51204_, SoundEvents.GENERIC_EAT, SoundSource.BLOCKS, 1.0F, 1.0F);
+@Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        ItemStack stackHand = player.getItemInHand(hand);
 
-        if (p_51203_.isClientSide) {
-            if (eat(p_51203_, p_51204_, p_51202_, p_51205_).consumesAction()) {
+        Item item = stackHand.getItem();
+        if (stackHand.is(ItemTags.CANDLES) && (Integer)state.getValue(BITES) == 0) {
+            Block block = Block.byItem(item);
+            if (block instanceof CandleBlock) {
+                if (!player.isCreative()) {
+                    stackHand.shrink(1);
+                }
+
+                level.playSound((Player)null, pos, SoundEvents.CAKE_ADD_CANDLE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.setBlockAndUpdate(pos, CandleWizardPie.byCandle(block));
+                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+                player.awardStat(Stats.ITEM_USED.get(item));
+                return InteractionResult.SUCCESS;
+            }
+        }
+        if (level.isClientSide) {
+            if (eat(level, pos, state, player).consumesAction()) {
+
                 return InteractionResult.SUCCESS;
             }
 
@@ -46,7 +68,7 @@ public class WizardPie extends CakeBlock {
             }
         }
 
-        return eat(p_51203_, p_51204_, p_51202_, p_51205_);
+        return eat(level, pos, state, player);
     }
     protected static InteractionResult eat(LevelAccessor world, BlockPos blockPos, BlockState blockState, Player player) {
         if (!player.canEat(false)) {
@@ -54,6 +76,7 @@ public class WizardPie extends CakeBlock {
         } else {
             player.awardStat(Stats.EAT_CAKE_SLICE);
             player.getFoodData().eat(4, 0.8F);
+            world.playSound((Player)null, blockPos, SoundEvents.GENERIC_EAT, SoundSource.BLOCKS, 1.0F, 1.0F);
 
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 1));
 

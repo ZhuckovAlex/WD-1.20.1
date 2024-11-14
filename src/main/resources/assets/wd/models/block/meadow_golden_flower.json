@@ -3,5 +3,5 @@
   "textures": {
     "cross": "wd:block/meadow_golden_flower"
   },
-  "render_type": "translucent"
+  "render_type": "cutout"
 }

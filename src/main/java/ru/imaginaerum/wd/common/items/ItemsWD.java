@@ -5,12 +5,15 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.imaginaerum.wd.WD;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
+import ru.imaginaerum.wd.common.blocks.custom.NetherrackBonemeal;
 import ru.imaginaerum.wd.common.items.custom.*;
 
 public class ItemsWD {
@@ -109,6 +112,10 @@ public class ItemsWD {
     public static final RegistryObject<Item> COCKED_GOATS_MEAT = ITEMS.register("cocked_goats_meat",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().meat().nutrition(8).saturationMod(0.4f)
                     .build())));
+    public static final RegistryObject<Item> WIZARD_PIE_SLICE = ITEMS.register("wizard_pie_slice",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).fast().effect(() -> {
+                return new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 1, false, false);
+            }, 1.0F).build())));
     public static final RegistryObject<Item> FROG_BODY = ITEMS.register("frog_body",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().meat().nutrition(1).saturationMod(0.5f)
                     .effect(new MobEffectInstance(MobEffects.POISON, 40, 0), 0.6F)
@@ -217,23 +224,31 @@ public class ItemsWD {
     public static final RegistryObject<Item> SPARKLING_POLLEN = ITEMS.register("sparkling_pollen",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone",
+            () -> new SoulStone(new Item.Properties().stacksTo(1)));
+
     // Оружие
     public static final RegistryObject<Item> FLAME_ARROW = ITEMS.register("flame_arrow",
             () -> new FlameArrowItem(new Item.Properties()));
 
     // Мука
     public static final RegistryObject<Item> CRIMSON_BONE_MEAL = ITEMS.register("crimson_bone_meal",
-            () -> new AnimateItem(new Item.Properties()));
+            () -> new NetherrackBonemeal(new Item.Properties(), Blocks.CRIMSON_NYLIUM));
     public static final RegistryObject<Item> WARPED_BONE_MEAL = ITEMS.register("warped_bone_meal",
-            () -> new AnimateItem(new Item.Properties()));
+            () -> new NetherrackBonemeal(new Item.Properties(), Blocks.WARPED_NYLIUM));
 
     // Ванила + растения
     public static final RegistryObject<Item> WARPED_WART = ITEMS.register("warped_wart",
             () -> new ItemNameBlockItem(BlocksWD.WARPED_WART.get(),(new Item.Properties())));
-
+    public static final RegistryObject<Item> ROTTEN_PIE = ITEMS.register("rotten_pie",
+            () -> new ItemNameBlockItem(BlocksWD.ROTTEN_PIE.get(),(new Item.Properties())));
     // Сюда пишем растения
     public static final RegistryObject<Item> FIRE_STEM = ITEMS.register("fire_stem",
             () -> new ItemNameBlockItem(BlocksWD.FIRE_STEM.get(), (new Item.Properties().fireResistant())));
+
+    public static final RegistryObject<Item> ROSE_OF_THE_MURDERER = ITEMS.register("rose_of_the_murderer",
+            () -> new ItemNameBlockItem(BlocksWD.ROSE_OF_THE_MURDERER.get(), (new Item.Properties().fireResistant())));
+
     public static final RegistryObject<Item> POTTED_FIRE_STEM = ITEMS.register("potted_fire_stem",
             () -> new ItemNameBlockItem(BlocksWD.POTTED_FIRE_STEM.get(), (new Item.Properties().fireResistant())));
     
@@ -243,8 +258,5 @@ public class ItemsWD {
     public static final RegistryObject<Item> COASTAL_STEEP_FIBERS = ITEMS.register("coastal_steep_fibers",
             () -> new Item(new Item.Properties()));
 
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
 
 }

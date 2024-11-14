@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/template_cake_with_candle",
+  "textures": {
+    "bottom": "wd:block/wizard_pie_bottom",
+    "candle": "minecraft:block/blue_candle_lit",
+    "particle": "wd:block/wizard_pie_side",
+    "side": "wd:block/wizard_pie_side",
+    "top": "wd:block/wizard_pie_top"
+  }
+}

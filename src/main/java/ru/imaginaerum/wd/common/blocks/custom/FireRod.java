@@ -94,10 +94,11 @@ public class FireRod extends Block implements net.minecraftforge.common.IPlantab
                 for(Direction direction : Direction.Plane.HORIZONTAL) {
                     BlockState blockstate1 = p_57176_.getBlockState(blockpos.relative(direction));
                     FluidState fluidstate = p_57176_.getFluidState(blockpos.relative(direction));
-                    if (fluidstate.is(Fluids.LAVA)) {
+                    if ((fluidstate.is(Fluids.LAVA))||((fluidstate.is(Fluids.FLOWING_LAVA)))) {
                         return true;
                     }
                 }
+
             }
             else if (blockstate.is(Blocks.MAGMA_BLOCK)){
 

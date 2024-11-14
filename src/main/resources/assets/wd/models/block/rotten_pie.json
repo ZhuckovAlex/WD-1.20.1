@@ -1,0 +1,23 @@
+{
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "wd:block/rotten_pie",
+		"particle": "wd:block/rotten_pie"
+	},
+	"render_type": "cutout",
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"faces": {
+				"north": {"uv": [7, 0, 14, 4], "texture": "#0"},
+				"east": {"uv": [7, 0, 14, 4], "texture": "#0"},
+				"south": {"uv": [7, 0, 14, 4], "texture": "#0"},
+				"west": {"uv": [7, 0, 14, 4], "texture": "#0"},
+				"up": {"uv": [7, 7, 0, 0], "texture": "#0"},
+				"down": {"uv": [7, 7, 0, 14], "texture": "#0"}
+			}
+		}
+	]
+}

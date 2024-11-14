@@ -18,11 +18,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
+import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
 import ru.imaginaerum.wd.common.custom_recipes.BetterBrewingRecipe;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.items.arrows.DispenserRegistry;
 import ru.imaginaerum.wd.common.items.arrows.EntityTypeInit;
 import ru.imaginaerum.wd.common.items.arrows.FlameArrowRenderer;
+import ru.imaginaerum.wd.common.particles.ModParticles;
 import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
 import ru.imaginaerum.wd.common.tab.TabWD;
 
@@ -45,13 +47,15 @@ public class WD
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         EntityTypeInit.ENTITY_TYPES.register(modEventBus);
-        ItemsWD.register(modEventBus);
-        BlocksWD.register(modEventBus);
+        ItemsWD.ITEMS.register(modEventBus);
+        ModParticles.PARTICLE_TYPES.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        BlocksWD.BLOCKS.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
-        CustomSoundEvents.register(modEventBus);
+        CustomSoundEvents.SOUND_EVENTS.register(modEventBus);
         modEventBus.addListener(this::addCreative);
-        TabWD.register(modEventBus);
+        TabWD.CREATIVE_MODE_TABS.register(modEventBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener((BuildCreativeModeTabContentsEvent e) -> {
