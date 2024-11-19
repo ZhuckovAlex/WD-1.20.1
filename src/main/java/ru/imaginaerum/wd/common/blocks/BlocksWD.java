@@ -37,8 +37,9 @@ public class BlocksWD {
     public static final RegistryObject<Block> ROSE_OF_THE_MURDERER = BLOCKS.register("rose_of_the_murderer",
             () -> new RoseMurderer(BlockBehaviour.Properties.of().noCollission()
                     .randomTicks().instabreak().sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> ROTTEN_PIE = BLOCKS.register("rotten_pie",
-            () -> new RottenPie(BlockBehaviour.Properties.of().randomTicks().strength(0.5F).sound(SoundType.WOOL)));
+
+
+
     public static final RegistryObject<Block> CHARMING_BERRIES_BLOCK = registerBlock("charming_berries_block",
             () -> new CharmingBerries(BlockBehaviour.Properties.of().randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
     public static final RegistryObject<Block> FREEZE_BERRIES = BLOCKS.register("freeze_berries",
@@ -53,8 +54,10 @@ public class BlocksWD {
                     .sound(SoundType.SAND)));
     public static final RegistryObject<Block> WIZARD_PIE = BLOCKS.register("wizard_pie",
             () -> new WizardPie(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.WOOL).randomTicks()));
+    public static final RegistryObject<Block> ROTTEN_PIE = BLOCKS.register("rotten_pie",
+            () -> new RottenPie(BlockBehaviour.Properties.of().randomTicks().strength(0.5F).sound(SoundType.WOOL)));
 
-    //Торты со свечами
+    //Торты со свечами wizard
     public static final RegistryObject<Block> CANDLE_WIZARD_PIE = registerBlock("candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> WHITE_CANDLE_WIZARD_PIE = registerBlock("white_candle_wizard_pie",

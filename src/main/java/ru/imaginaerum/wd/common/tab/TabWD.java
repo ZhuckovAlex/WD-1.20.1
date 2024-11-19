@@ -84,6 +84,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.ROSE_OF_THE_MURDERER.get());
                         pOutput.accept(ItemsWD.ROTTEN_PIE.get());
                         pOutput.accept(ItemsWD.WIZARD_PIE_SLICE.get());
+                        pOutput.accept(ItemsWD.ROTTEN_PIE_SLICE.get());
+                        pOutput.accept(ItemsWD.ROBIN_STICK.get());
 
 
 

@@ -1,0 +1,524 @@
+{
+  "entities": {
+    "minecraft:zombie": {
+      "drops": [
+        {
+          "item": "minecraft:rotten_flesh",
+          "min_count": 1,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "wd:rotten_pie_slice",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:husk": {
+      "drops": [
+        {
+          "item": "minecraft:rotten_flesh",
+          "min_count": 1,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "wd:rotten_pie_slice",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:drowned": {
+      "drops": [
+        {
+          "item": "minecraft:rotten_flesh",
+          "min_count": 1,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "wd:rotten_pie_slice",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:wolf": {
+      "drops": [
+        {
+          "item": "wd:hunting_twister",
+          "min_count": 1,
+          "max_count": 1,
+          "chance": 1
+        }
+      ]
+    },
+    "minecraft:zombie_villager": {
+      "drops": [
+        {
+          "item": "minecraft:rotten_flesh",
+          "min_count": 1,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:cake_slice",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:blaze": {
+      "drops": [
+        {
+          "item": "wd:handful_nether",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1.0
+        },
+        {
+          "item": "wd:pepper",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:witch": {
+      "drops": [
+        {
+          "item": "wd:wizard_pie_slice",
+          "min_count": 1,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "wd:wizard_pie_slice",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:skeleton": {
+      "drops": [
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 2,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        },
+        {
+          "item": "minecraft:skeleton_skull",
+          "min_count": 1,
+          "max_count": 1,
+          "chance": 0.02
+        }
+      ]
+    },
+    "minecraft:wither_skeleton": {
+      "drops": [
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 2,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        },
+        {
+          "item": "minecraft:wither_skeleton_skull",
+          "min_count": 1,
+          "max_count": 1,
+          "chance": 0.05
+        }
+      ]
+    },
+    "minecraft:stray": {
+      "drops": [
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 2,
+          "max_count": 4,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:bone_broth",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:hoglin": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_porkchop",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:smoked_ham",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.4
+        },
+        {
+          "item": "farmersdelight:noodle_soup",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:cow": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_beef",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:beef_stew",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.4
+        },
+        {
+          "item": "farmersdelight:beef_patty",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:enderman": {
+      "drops": [
+        {
+          "item": "minecraft:chorus_fruit",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        }
+      ]
+    },
+    "minecraft:mooshroom": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_beef",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:beef_stew",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.4
+        },
+        {
+          "item": "minecraft:mushroom_stew",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        },
+        {
+          "item": "farmersdelight:beef_patty",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:rabbit": {
+      "drops": [
+        {
+          "item": "minecraft:rabbit_stew",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "minecraft:rabbit_foot",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:turtle": {
+      "drops": [
+        {
+          "item": "wd:turtle_soup",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "wd:turtle_soup",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:sheep": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_mutton",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:cooked_mutton_chops",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:chicken": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_chicken",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:chicken_soup",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.2
+        }
+      ]
+    },
+    "minecraft:pig": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_porkchop",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:smoked_ham",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:bee": {
+      "drops": [
+        {
+          "item": "minecraft:honey_bottle",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "minecraft:honey_bottle",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:cod": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_cod",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:cod_roll",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        }
+      ]
+    },
+    "minecraft:salmon": {
+      "drops": [
+        {
+          "item": "minecraft:cooked_salmon",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:salmon_roll",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        }
+      ]
+    },
+    "minecraft:tropical_fish": {
+      "drops": [
+        {
+          "item": "farmersdelight:fish_stew",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:fish_stew",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        }
+      ]
+    },
+    "minecraft:squid": {
+      "drops": [
+        {
+          "item": "farmersdelight:squid_ink_pasta",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:squid_ink_pasta",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        }
+      ]
+    },
+    "minecraft:glow_squid": {
+      "drops": [
+        {
+          "item": "farmersdelight:squid_ink_pasta",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 1
+        },
+        {
+          "item": "farmersdelight:squid_ink_pasta",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.45
+        }
+      ]
+    },
+    "minecraft:polar_bear": {
+      "drops": [
+        {
+          "item": "wd:cocked_bear_meat",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "wd:bear_meat_soup",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:goat": {
+      "drops": [
+        {
+          "item": "wd:cocked_goats_meat",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "wd:goulash_with_goat_meat",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:frog": {
+      "drops": [
+        {
+          "item": "wd:cocked_frog",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "wd:cocked_frog_legs",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:horse": {
+      "drops": [
+        {
+          "item": "wd:cocked_horse",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "minecraft:leather",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:mule": {
+      "drops": [
+        {
+          "item": "wd:cocked_horse",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "minecraft:leather",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
+    "minecraft:donkey": {
+      "drops": [
+        {
+          "item": "wd:cocked_horse",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "minecraft:leather",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    }
+  }
+}

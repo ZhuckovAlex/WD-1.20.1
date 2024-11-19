@@ -1,0 +1,738 @@
+{
+  "minecraft:grass": {
+    "drops": [
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:seagrass": {
+    "drops": [
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:tall_seagrass": {
+    "drops": [
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:tall_grass": {
+    "drops": [
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:wheat",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 0.42
+      }
+    ]
+  },
+  "minecraft:fern": {
+    "drops": [
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:large_fern": {
+    "drops": [
+      {
+        "item": "minecraft:wheat",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:wheat",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 0.42
+      }
+    ]
+  },
+  "minecraft:crimson_roots": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:warped_roots": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:crimson_fungus": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:warped_fungus": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:nether_wart_block": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 4,
+        "max_count": 8,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:warped_wart_block": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 4,
+        "max_count": 8,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:nether_wart": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "wd:warped_wart": {
+    "drops": [
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:nether_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:oxeye_daisy": {
+    "drops": [
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:sunflower": {
+    "drops": [
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:bee_nest": {
+    "drops": [
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 2,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:beehive": {
+    "drops": [
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:honey_bottle",
+        "min_count": 2,
+        "max_count": 3,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:red_mushroom": {
+    "drops": [
+      {
+        "item": "minecraft:mushroom_stew",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:brown_mushroom": {
+    "drops": [
+      {
+        "item": "minecraft:mushroom_stew",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:mushroom_stem": {
+    "drops": [
+      {
+        "item": "minecraft:mushroom_stew",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.45
+      }
+    ]
+  },
+  "minecraft:red_mushroom_block": {
+    "drops": [
+      {
+        "item": "minecraft:mushroom_stew",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.45
+      }
+    ]
+  },
+  "minecraft:brown_mushroom_block": {
+    "drops": [
+      {
+        "item": "minecraft:mushroom_stew",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.45
+      }
+    ]
+  },
+  "minecraft:wheat": {
+    "drops": [
+      {
+        "item": "minecraft:bread",
+        "min_count": 5,
+        "max_count": 8,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:bread",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:dandelion": {
+    "drops": [
+      {
+        "item": "minecraft:potato",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:potato",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:poppy": {
+    "drops": [
+      {
+        "item": "minecraft:beetroot",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:beetroot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:hay_block": {
+    "drops": [
+      {
+        "item": "minecraft:bread",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:bread",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.4
+      }
+    ]
+  },
+  "minecraft:allium": {
+    "drops": [
+      {
+        "item": "farmersdelight:onion",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:onion",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:kelp": {
+    "drops": [
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "minecraft:kelp_plant": {
+    "drops": [
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:kelp_roll",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "minecraft:cave_vines": {
+    "drops": [
+      {
+        "item": "farmersdelight:glow_berry_custard",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:glow_berry_custard",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "minecraft:cave_vines_plant": {
+    "drops": [
+      {
+        "item": "farmersdelight:glow_berry_custard",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:glow_berry_custard",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "minecraft:sweet_berry_bush": {
+    "drops": [
+      {
+        "item": "wd:sweet_jam",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:sweet_berry_cheesecake_slice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:beetroots": {
+    "drops": [
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:red_tulip": {
+    "drops": [
+      {
+        "item": "minecraft:beetroot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:beetroot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:white_tulip": {
+    "drops": [
+      {
+        "item": "farmersdelight:milk_bottle",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:milk_bottle",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:pink_tulip": {
+    "drops": [
+      {
+        "item": "farmersdelight:melon_juice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:melon_juice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:orange_tulip": {
+    "drops": [
+      {
+        "item": "minecraft:carrot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:carrot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "minecraft:rose_bush": {
+    "drops": [
+      {
+        "item": "farmersdelight:sweet_berry_cheesecake_slice",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:sweet_berry_cheesecake_slice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "minecraft:glow_lichen": {
+    "drops": [
+      {
+        "item": "farmersdelight:bone_broth",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:bone_broth",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 0.15
+      }
+    ]
+  },
+  "minecraft:carrots": {
+    "drops": [
+      {
+        "item": "minecraft:golden_carrot",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.15
+      }
+    ]
+  },
+  "minecraft:potatoes": {
+    "drops": [
+      {
+        "item": "minecraft:baked_potato",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:stuffed_potato",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.15
+      }
+    ]
+  },
+  "minecraft:pumpkin": {
+    "drops": [
+      {
+        "item": "farmersdelight:pumpkin_slice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:pumpkin_pie",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.25
+      }
+    ]
+  },
+  "minecraft:carved_pumpkin": {
+    "drops": [
+      {
+        "item": "farmersdelight:pumpkin_slice",
+        "min_count": 1,
+        "max_count": 1,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:pumpkin_pie",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.10
+      }
+    ]
+  },
+  "minecraft:melon": {
+    "drops": [
+      {
+        "item": "farmersdelight:melon_juice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:melon_popsicle",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.35
+      }
+    ]
+  },
+  "minecraft:cocoa": {
+    "drops": [
+      {
+        "item": "farmersdelight:hot_cocoa",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:hot_cocoa_with_sparkling_pollen",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.15
+      }
+    ]
+  }
+}

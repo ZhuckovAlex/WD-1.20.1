@@ -3,5 +3,5 @@
   "textures": {
     "cross": "wd:block/poison_berry3"
   },
-  "render_type": "translucent"
+  "render_type": "cutout"
 }

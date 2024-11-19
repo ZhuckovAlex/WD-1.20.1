@@ -13,6 +13,14 @@
       }
     ]
   },
+  "flies": {
+    "subtitle": "sounds.wd.flies",
+    "sounds": [
+      {
+        "name": "wd:flies"
+      }
+    ]
+  },
   "golden_flower": {
     "subtitle": "sounds.wd.golden_flower",
     "sounds": [

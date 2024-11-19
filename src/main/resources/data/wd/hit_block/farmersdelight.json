@@ -1,0 +1,298 @@
+{
+  "farmersdelight:sandy_shrub": {
+    "drops": [
+      {
+        "item": "farmersdelight:hot_cocoa",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      }
+    ]
+  },
+  "farmersdelight:beetroot_crate": {
+    "drops": [
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 4,
+        "max_count": 6,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "farmersdelight:carrot_crate": {
+    "drops": [
+      {
+        "item": "minecraft:golden_carrot",
+        "min_count": 4,
+        "max_count": 6,
+        "chance": 1.0
+      }
+    ]
+  },
+  "farmersdelight:cabbage_crate": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 6,
+        "max_count": 8,
+        "chance": 1.0
+      }
+    ]
+  },
+  "farmersdelight:onion_crate": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 6,
+        "max_count": 8,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:vegetable_soup",
+        "min_count": 2,
+        "max_count": 4,
+        "chance": 0.4
+      }
+    ]
+  },
+  "farmersdelight:tomato_crate": {
+    "drops": [
+      {
+        "item": "farmersdelight:tomato_sauce",
+        "min_count": 6,
+        "max_count": 7,
+        "chance": 1.0
+      }
+    ]
+  },
+  "farmersdelight:potato_crate": {
+    "drops": [
+      {
+        "item": "minecraft:baked_potato",
+        "min_count": 4,
+        "max_count": 8,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:stuffed_potato",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:rice_bale": {
+    "drops": [
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 3,
+        "max_count": 9,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:rice_bag": {
+    "drops": [
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 3,
+        "max_count": 9,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:wild_cabbages": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:cabbages": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:wild_tomatoes": {
+    "drops": [
+      {
+        "item": "farmersdelight:tomato_sauce",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:tomato_sauce",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:tomatoes": {
+    "drops": [
+      {
+        "item": "farmersdelight:tomato_sauce",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:tomato_sauce",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:wild_onions": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:onion",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:onions": {
+    "drops": [
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:onion",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "farmersdelight:wild_carrots": {
+    "drops": [
+      {
+        "item": "minecraft:golden_carrot",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:mixed_salad",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.30
+      }
+    ]
+  },
+  "farmersdelight:wild_potatoes": {
+    "drops": [
+      {
+        "item": "minecraft:baked_potato",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:stuffed_potato",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.30
+      }
+    ]
+  },
+  "farmersdelight:wild_rice": {
+    "drops": [
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.30
+      }
+    ]
+  },
+  "farmersdelight:rice": {
+    "drops": [
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "farmersdelight:fried_rice",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 0.30
+      }
+    ]
+  },
+  "farmersdelight:wild_beetroots": {
+    "drops": [
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 1,
+        "max_count": 4,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:beetroot_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.4
+      }
+    ]
+  }
+}

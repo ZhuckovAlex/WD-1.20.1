@@ -1,6 +1,12 @@
 {
   "variants": {
-    "":
-    {"model": "wd:block/rotten_pie"}
+    "stage=0":
+    {"model": "wd:block/rotten_pie"},
+    "stage=1":
+    {"model": "wd:block/rotten_pie_1"},
+    "stage=2":
+    {"model": "wd:block/rotten_pie_2"},
+    "stage=3":
+    {"model": "wd:block/rotten_pie_3"}
   }
 }

@@ -15,10 +15,7 @@ import ru.imaginaerum.wd.WD;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.items.custom.SoulStone;
 import ru.imaginaerum.wd.common.particles.ModParticles;
-import ru.imaginaerum.wd.common.particles.custom.GoldenFlowerParticle;
-import ru.imaginaerum.wd.common.particles.custom.RobinStarsParticles;
-import ru.imaginaerum.wd.common.particles.custom.RobinStarsParticlesProjectile;
-import ru.imaginaerum.wd.common.particles.custom.StombleRoseParticles;
+import ru.imaginaerum.wd.common.particles.custom.*;
 
 
 @Mod.EventBusSubscriber(modid = WD.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -40,6 +37,8 @@ public class ModEventClientBusEvents {
 
             Minecraft.getInstance().particleEngine.register(ModParticles.STOMBLE_ROSE.get(),
                     StombleRoseParticles.Provider::new);
+            Minecraft.getInstance().particleEngine.register(ModParticles.FLIES.get(),
+                    FliesParticles.Provider::new);
         }
     }
     @SubscribeEvent

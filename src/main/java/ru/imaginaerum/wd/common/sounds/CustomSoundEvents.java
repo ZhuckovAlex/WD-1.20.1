@@ -16,7 +16,10 @@ public class CustomSoundEvents {
             registerSoundEvents("nyamnyam");
     public static final RegistryObject<SoundEvent> NYAMNYAM_END =
             registerSoundEvents("nyamnyam_end");
-
+    public static final RegistryObject<SoundEvent> FLIES =
+            registerSoundEvents("flies");
+    public static final RegistryObject<SoundEvent> ROBIN_STICK =
+            registerSoundEvents("robin_stick");
 
 
 

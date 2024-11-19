@@ -15,7 +15,7 @@
       "item": "minecraft:red_wool"
     },
     "#": {
-      "item": "wizardry_delight:dragolit_ingot"
+      "item": "wd:dragolit_ingot"
     }
   },
   "pattern": [
@@ -25,6 +25,6 @@
   ],
   "result": {
     "count": 1,
-    "item": "wizardry_delight:robin_stick"
+    "item": "wd:robin_stick"
   }
 }

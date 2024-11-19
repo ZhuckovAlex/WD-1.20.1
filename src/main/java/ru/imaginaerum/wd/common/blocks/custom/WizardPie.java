@@ -79,6 +79,7 @@ public class WizardPie extends CakeBlock {
             world.playSound((Player)null, blockPos, SoundEvents.GENERIC_EAT, SoundSource.BLOCKS, 1.0F, 1.0F);
 
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 1));
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0));
 
             int i = blockState.getValue(BITES);
             world.gameEvent(player, GameEvent.EAT, blockPos);

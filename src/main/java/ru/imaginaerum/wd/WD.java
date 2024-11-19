@@ -20,6 +20,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
 import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
 import ru.imaginaerum.wd.common.custom_recipes.BetterBrewingRecipe;
+import ru.imaginaerum.wd.common.effects.EffectsWD;
+import ru.imaginaerum.wd.common.entities.ModEntities;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.items.arrows.DispenserRegistry;
 import ru.imaginaerum.wd.common.items.arrows.EntityTypeInit;
@@ -51,9 +53,11 @@ public class WD
         ModParticles.PARTICLE_TYPES.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         BlocksWD.BLOCKS.register(modEventBus);
+        ModEntities.ENTITY_TYPES.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         CustomSoundEvents.SOUND_EVENTS.register(modEventBus);
+        EffectsWD.MOB_EFFECTS.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         TabWD.CREATIVE_MODE_TABS.register(modEventBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -119,6 +123,7 @@ public class WD
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.POISON_BERRY.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.MEADOW_GOLDEN_FLOWER.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.ROSE_OF_GHOSTY_TEARS.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(ItemsWD.ROSE_OF_THE_MURDERER.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.MEDICAL_POTATO.get(), 0.2f);
 
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,

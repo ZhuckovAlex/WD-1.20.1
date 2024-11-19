@@ -1,0 +1,66 @@
+{
+  "wd:freeze_berries": {
+    "drops": [
+      {
+        "item": "wd:freeze_jam",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:freeze_jam",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
+  "wd:fire_stem": {
+    "drops": [
+      {
+        "item": "wd:handful_nether",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:pepper",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "wd:charming_berries_block": {
+    "drops": [
+      {
+        "item": "wd:charming_jam",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:charming_jam",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  },
+  "wd:poison_berry": {
+    "drops": [
+      {
+        "item": "wd:poison_berry_jam",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:handful_yadoga",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.35
+      }
+    ]
+  }
+}

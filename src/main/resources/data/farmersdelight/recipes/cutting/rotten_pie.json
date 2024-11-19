@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "wd:rotten_pie"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "wd:rotten_pie_slice"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

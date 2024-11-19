@@ -14,6 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 import ru.imaginaerum.wd.WD;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
 import ru.imaginaerum.wd.common.blocks.custom.NetherrackBonemeal;
+import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.items.custom.*;
 
 public class ItemsWD {
@@ -113,9 +114,16 @@ public class ItemsWD {
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().meat().nutrition(8).saturationMod(0.4f)
                     .build())));
     public static final RegistryObject<Item> WIZARD_PIE_SLICE = ITEMS.register("wizard_pie_slice",
-            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).fast().effect(() -> {
-                return new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 1, false, false);
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).fast()
+                    .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 1), 1)
+                    .effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1)
+                    .build())));
+
+    public static final RegistryObject<Item> ROTTEN_PIE_SLICE = ITEMS.register("rotten_pie_slice",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).fast().effect(() -> {
+                return new MobEffectInstance(EffectsWD.FLIES.get(), 160, 0, true, true);
             }, 1.0F).build())));
+
     public static final RegistryObject<Item> FROG_BODY = ITEMS.register("frog_body",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().meat().nutrition(1).saturationMod(0.5f)
                     .effect(new MobEffectInstance(MobEffects.POISON, 40, 0), 0.6F)
@@ -230,6 +238,12 @@ public class ItemsWD {
     // Оружие
     public static final RegistryObject<Item> FLAME_ARROW = ITEMS.register("flame_arrow",
             () -> new FlameArrowItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> ROBIN_STICK = ITEMS.register("robin_stick",
+            () -> new StarBallItem(new Item.Properties().durability(70)));
+    public static final RegistryObject<Item> STAR_BALL = ITEMS.register("star_ball",
+            () -> new StarBallItem(new Item.Properties()));
+
 
     // Мука
     public static final RegistryObject<Item> CRIMSON_BONE_MEAL = ITEMS.register("crimson_bone_meal",
