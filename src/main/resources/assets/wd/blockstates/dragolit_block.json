@@ -1,6 +1,6 @@
 {
   "variants": {
     "":
-    {"model": "wizardry_delight:block/dragolit_block"}
+    {"model": "wd:block/dragolit_block"}
   }
 }

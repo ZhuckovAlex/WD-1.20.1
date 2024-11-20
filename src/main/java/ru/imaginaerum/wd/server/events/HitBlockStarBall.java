@@ -12,6 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.ZombieVillager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -23,6 +24,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
+import ru.imaginaerum.wd.common.blocks.custom.RottenPie;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.particles.ModParticles;
 
@@ -85,18 +87,47 @@ public class HitBlockStarBall {
             return; // Завершаем выполнение, так как взрыв произошел
         }
         if (state.getBlock() == BlocksWD.ROTTEN_PIE.get()) {
-            // Замените блок на воздух
+            int stage = state.getValue(RottenPie.STAGE);
+            // Заменить блок на воздух
             level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
 
-            // Создайте 8 зомби
-            for (int i = 0; i < 8; i++) {
-                Zombie zombie = EntityType.ZOMBIE.create(level);
-                if (zombie != null) {
-                    // Размещаем зомби с небольшими случайными смещениями
-                    double offsetX = (level.random.nextDouble() - 0.5) * 1.5;
-                    double offsetZ = (level.random.nextDouble() - 0.5) * 1.5;
-                    zombie.moveTo(pos.getX() + 0.5 + offsetX, pos.getY(), pos.getZ() + 0.5 + offsetZ, level.random.nextFloat() * 360.0f, 0.0f);
-                    level.addFreshEntity(zombie);
+            // Определим количество зомби в зависимости от стадии
+            int zombieCount = 0;
+            switch (stage) {
+                case 0:
+                    zombieCount = 8; // На стадии 0 создаем 8 зомби
+                    break;
+                case 1:
+                    zombieCount = 6; // На стадии 1 создаем 6 зомби
+                    break;
+                case 2:
+                    zombieCount = 4; // На стадии 2 создаем 4 зомби
+                    break;
+                case 3:
+                    zombieCount = 2; // На стадии 3 создаем 2 зомби
+                    break;
+            }
+
+            // Создание зомби
+            for (int i = 0; i < zombieCount; i++) {
+                if (level.random.nextDouble() < 0.1) { // 10% шанс на зомби-жителя
+                    ZombieVillager zombieVillager = EntityType.ZOMBIE_VILLAGER.create(level);
+                    if (zombieVillager != null) {
+                        // Размещаем зомби-жителя с небольшими случайными смещениями
+                        double offsetX = (level.random.nextDouble() - 0.5) * 1.5;
+                        double offsetZ = (level.random.nextDouble() - 0.5) * 1.5;
+                        zombieVillager.moveTo(pos.getX() + 0.5 + offsetX, pos.getY(), pos.getZ() + 0.5 + offsetZ, level.random.nextFloat() * 360.0f, 0.0f);
+                        level.addFreshEntity(zombieVillager);
+                    }
+                } else { // 90% шанс на обычного зомби
+                    Zombie zombie = EntityType.ZOMBIE.create(level);
+                    if (zombie != null) {
+                        // Размещаем зомби с небольшими случайными смещениями
+                        double offsetX = (level.random.nextDouble() - 0.5) * 1.5;
+                        double offsetZ = (level.random.nextDouble() - 0.5) * 1.5;
+                        zombie.moveTo(pos.getX() + 0.5 + offsetX, pos.getY(), pos.getZ() + 0.5 + offsetZ, level.random.nextFloat() * 360.0f, 0.0f);
+                        level.addFreshEntity(zombie);
+                    }
                 }
             }
 

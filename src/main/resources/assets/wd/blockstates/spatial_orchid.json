@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "wizardry_delight:block/spatial_orchid"
+      "model": "wd:block/spatial_orchid"
     }
   }
 }

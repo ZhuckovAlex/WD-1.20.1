@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_post_ends"
+        "model": "wd:block/dragolit_grid_post_ends"
       }
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_post"
+        "model": "wd:block/dragolit_grid_post"
       },
       "when": {
         "east": "false",
@@ -18,7 +18,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_cap"
+        "model": "wd:block/dragolit_grid_cap"
       },
       "when": {
         "east": "false",
@@ -29,7 +29,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_cap",
+        "model": "wd:block/dragolit_grid_cap",
         "y": 90
       },
       "when": {
@@ -41,7 +41,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_cap_alt"
+        "model": "wd:block/dragolit_grid_cap_alt"
       },
       "when": {
         "east": "false",
@@ -52,7 +52,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_cap_alt",
+        "model": "wd:block/dragolit_grid_cap_alt",
         "y": 90
       },
       "when": {
@@ -64,7 +64,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_side"
+        "model": "wd:block/dragolit_grid_side"
       },
       "when": {
         "north": "true"
@@ -72,7 +72,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_side",
+        "model": "wd:block/dragolit_grid_side",
         "y": 90
       },
       "when": {
@@ -81,7 +81,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_side_alt"
+        "model": "wd:block/dragolit_grid_side_alt"
       },
       "when": {
         "south": "true"
@@ -89,7 +89,7 @@
     },
     {
       "apply": {
-        "model": "wizardry_delight:block/dragolit_grid_side_alt",
+        "model": "wd:block/dragolit_grid_side_alt",
         "y": 90
       },
       "when": {

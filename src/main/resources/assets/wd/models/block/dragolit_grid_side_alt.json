@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "wizardry_delight:block/dragolit_grid",
-        "bars": "wizardry_delight:block/dragolit_grid",
-        "edge": "wizardry_delight:block/dragolit_grid"
+        "particle": "wd:block/dragolit_grid",
+        "bars": "wd:block/dragolit_grid",
+        "edge": "wd:block/dragolit_grid"
     },"render_type": "cutout",
     "elements": [
         {   "from": [ 8, 0, 8 ],

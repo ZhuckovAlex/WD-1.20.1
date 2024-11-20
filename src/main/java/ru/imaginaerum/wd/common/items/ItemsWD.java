@@ -6,6 +6,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -82,6 +83,8 @@ public class ItemsWD {
             () -> new ItemNameBlockItem(BlocksWD.MEADOW_GOLDEN_FLOWER.get(),(new Item.Properties())));
     public static final RegistryObject<Item> ROSE_OF_GHOSTY_TEARS = ITEMS.register("rose_of_ghosty_tears",
             () -> new ItemNameBlockItem(BlocksWD.ROSE_OF_GHOSTY_TEARS.get(),(new Item.Properties())));
+    public static final RegistryObject<Item> SPATIAL_ORCHID = ITEMS.register("spatial_orchid",
+            () -> new ItemNameBlockItem(BlocksWD.SPATIAL_ORCHID.get(),(new Item.Properties())));
     public static final RegistryObject<Item> CHARMING_BERRIES = ITEMS.register("charming_berries",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).alwaysEat().fast()
                     .effect(new MobEffectInstance(MobEffects.HARM, 10, 0), 0.7F)
@@ -192,6 +195,7 @@ public class ItemsWD {
     public static final RegistryObject<Item> HUNTING_TWISTER = ITEMS.register("hunting_twister",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(14).saturationMod(0.7f)
                     .build())));
+
     public static final RegistryObject<Item> IRIS = ITEMS.register("iris",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
                     .fast()
@@ -217,7 +221,8 @@ public class ItemsWD {
                     .build())));
     public static final RegistryObject<Item> WIZARD_PIE = ITEMS.register("wizard_pie",
             () -> new ItemNameBlockItem(BlocksWD.WIZARD_PIE.get(),(new Item.Properties())));
-
+    public static final RegistryObject<Item> ROTTEN_PIE = ITEMS.register("rotten_pie",
+            () -> new ItemNameBlockItem(BlocksWD.ROTTEN_PIE.get(),(new Item.Properties())));
     // Особые ингредиенты
     public static final RegistryObject<Item> SILVERAN = ITEMS.register("silveran",
             () -> new Item(new Item.Properties()));
@@ -241,6 +246,8 @@ public class ItemsWD {
 
     public static final RegistryObject<Item> ROBIN_STICK = ITEMS.register("robin_stick",
             () -> new StarBallItem(new Item.Properties().durability(70)));
+    public static final RegistryObject<Item> DRAGOLIT_RAPIER = ITEMS.register("dragolit_rapier",
+            () -> new Rapier(Tiers.NETHERITE, -2,-1.6f,new Item.Properties().durability(70)));
     public static final RegistryObject<Item> STAR_BALL = ITEMS.register("star_ball",
             () -> new StarBallItem(new Item.Properties()));
 
@@ -254,8 +261,7 @@ public class ItemsWD {
     // Ванила + растения
     public static final RegistryObject<Item> WARPED_WART = ITEMS.register("warped_wart",
             () -> new ItemNameBlockItem(BlocksWD.WARPED_WART.get(),(new Item.Properties())));
-    public static final RegistryObject<Item> ROTTEN_PIE = ITEMS.register("rotten_pie",
-            () -> new ItemNameBlockItem(BlocksWD.ROTTEN_PIE.get(),(new Item.Properties())));
+
     // Сюда пишем растения
     public static final RegistryObject<Item> FIRE_STEM = ITEMS.register("fire_stem",
             () -> new ItemNameBlockItem(BlocksWD.FIRE_STEM.get(), (new Item.Properties().fireResistant())));
@@ -272,5 +278,13 @@ public class ItemsWD {
     public static final RegistryObject<Item> COASTAL_STEEP_FIBERS = ITEMS.register("coastal_steep_fibers",
             () -> new Item(new Item.Properties()));
 
-
+    // Ресурсы
+    public static final RegistryObject<Item> DRAGOLIT_INGOT = ITEMS.register("dragolit_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEAR_DRAGOLIT_NUGGET = ITEMS.register("clear_dragolit_nugget",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STRANGE_SCRAP = ITEMS.register("strange_scrap",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HEALING_DEW = ITEMS.register("healing_dew",
+            () -> new HealingDew(new Item.Properties()));
 }

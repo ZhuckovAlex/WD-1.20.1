@@ -83,10 +83,16 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.SOUL_STONE.get());
                         pOutput.accept(ItemsWD.ROSE_OF_THE_MURDERER.get());
                         pOutput.accept(ItemsWD.ROTTEN_PIE.get());
+                        pOutput.accept(ItemsWD.WIZARD_PIE.get());
                         pOutput.accept(ItemsWD.WIZARD_PIE_SLICE.get());
                         pOutput.accept(ItemsWD.ROTTEN_PIE_SLICE.get());
                         pOutput.accept(ItemsWD.ROBIN_STICK.get());
-
+                        pOutput.accept(ItemsWD.DRAGOLIT_INGOT.get());
+                        pOutput.accept(ItemsWD.STRANGE_SCRAP.get());
+                        pOutput.accept(ItemsWD.CLEAR_DRAGOLIT_NUGGET.get());
+                        pOutput.accept(ItemsWD.DRAGOLIT_RAPIER.get());
+                        pOutput.accept(ItemsWD.HEALING_DEW.get());
+                        pOutput.accept(ItemsWD.SPATIAL_ORCHID.get());
 
 
                         //Blocks
@@ -98,7 +104,10 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(BlocksWD.A_BLOCK_OF_SPARKING_POLLEN.get());
                         pOutput.accept(BlocksWD.MEADOW_GOLDEN_FLOWER.get());
                         pOutput.accept(BlocksWD.ROSE_OF_GHOSTY_TEARS.get());
-                        pOutput.accept(BlocksWD.WIZARD_PIE.get());
+                        pOutput.accept(BlocksWD.DRAGOLIT_GRID.get());
+                        pOutput.accept(BlocksWD.DRAGOLIT_BLOCK.get());
+                        pOutput.accept(BlocksWD.STRANGE_CHIP.get());
+
 
                     })
                     .build());

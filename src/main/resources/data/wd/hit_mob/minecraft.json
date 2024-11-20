@@ -217,6 +217,12 @@
           "min_count": 1,
           "max_count": 3,
           "chance": 1
+        },
+        {
+          "item": "minecraft:chorus_flower",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 0.05
         }
       ]
     },

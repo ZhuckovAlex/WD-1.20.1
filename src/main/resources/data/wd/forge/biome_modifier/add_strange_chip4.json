@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:end_highlands",
+  "features": "wd:strange_chip_ore_placed",
+  "step": "underground_ores"
+}

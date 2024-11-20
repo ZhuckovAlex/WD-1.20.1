@@ -7,24 +7,24 @@
   },
   "ingredients": [
     {
-      "item": "wizardry_delight:silveran"
+      "item": "wd:silveran"
     },
     {
-      "item": "wizardry_delight:a_drop_of_love"
+      "item": "wd:a_drop_of_love"
     },
     {
-      "item": "wizardry_delight:meadow_golden_flower"
+      "item": "wd:meadow_golden_flower"
     },
     {
       "item": "minecraft:golden_apple"
     },
     {
-      "item": "wizardry_delight:sugar_refined"
+      "item": "wd:sugar_refined"
     }
   ],
   "recipe_book_tab": "jam",
   "result": {
-    "item": "wizardry_delight:healing_dew",
+    "item": "wd:healing_dew",
     "count": 3
   }
 }

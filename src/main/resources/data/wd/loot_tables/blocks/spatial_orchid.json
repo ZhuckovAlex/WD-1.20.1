@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:spatial_orchid"
+          "name": "wd:spatial_orchid"
         }
       ],
       "rolls": 1.0

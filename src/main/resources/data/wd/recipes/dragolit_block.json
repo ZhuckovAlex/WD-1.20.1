@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "wizardry_delight:dragolit_ingot"
+      "item": "wd:dragolit_ingot"
     }
   },
   "result": {
-    "item": "wizardry_delight:dragolit_block",
+    "item": "wd:dragolit_block",
     "count": 1
   }
 }

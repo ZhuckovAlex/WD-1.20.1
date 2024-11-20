@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "wizardry_delight:clear_dragolit_nugget"
+      "item": "wd:clear_dragolit_nugget"
     }
   },
   "result": {
-    "item": "wizardry_delight:dragolit_ingot",
+    "item": "wd:dragolit_ingot",
     "count": 1
   }
 }

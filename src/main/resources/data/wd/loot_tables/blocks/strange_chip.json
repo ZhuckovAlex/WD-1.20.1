@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "wizardry_delight:strange_chip"
+              "name": "wd:strange_chip"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "wizardry_delight:strange_scrap"
+              "name": "wd:strange_scrap"
             }
           ]
         }

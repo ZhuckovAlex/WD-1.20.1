@@ -15,22 +15,33 @@ import net.minecraftforge.registries.ForgeRegistries;
 import ru.imaginaerum.wd.common.entities.ModEntities;
 import ru.imaginaerum.wd.common.entities.item_projectile_entities.AbstractHurtingProjectileMod;
 import ru.imaginaerum.wd.common.entities.item_projectile_entities.StarBall;
+import ru.imaginaerum.wd.common.items.ItemsWD;
 
 @Mod.EventBusSubscriber
 public class StrikeRobinStick {
 
     public static void execute(Entity entity, LevelAccessor world, double x, double y, double z) {
-        if (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getDamageValue() < 69) {
-            ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-            if (_ist.hurt(1, RandomSource.create(), null)) {
-                _ist.shrink(1);
-                _ist.setDamageValue(0);
+        // Получаем предмет из любой руки
+        ItemStack mainHandItem = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+        ItemStack offHandItem = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+
+        // Проверяем, что хотя бы в одной руке есть Robin Stick
+        if (isRobinStick(mainHandItem) || isRobinStick(offHandItem)) {
+            // Уменьшаем прочность на 1 и восстанавливаем
+            if (mainHandItem.getDamageValue() < 69) {
+                ItemStack _ist = (isRobinStick(mainHandItem)) ? mainHandItem : offHandItem;
+                if (_ist.hurt(1, RandomSource.create(), null)) {
+                    _ist.shrink(1);
+                    _ist.setDamageValue(0);
+                }
             }
+
             world.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("wd:robin_stick")), SoundSource.NEUTRAL, 1, 1);
 
             Entity _shootFrom = entity;
             Level projectileLevel = _shootFrom.level();
             if (!projectileLevel.isClientSide()) {
+                // Создаем и спавним StarBall
                 Projectile _entityToSpawn = new Object() {
                     public Projectile getFireball(Level level, Entity shooter, double ax, double ay, double az) {
                         AbstractHurtingProjectileMod entityToSpawn = new StarBall(ModEntities.STAR_BALL.get(), level);
@@ -47,5 +58,9 @@ public class StrikeRobinStick {
             }
         }
     }
-}
 
+    // Проверка, является ли предмет ROBIN_STICK
+    private static boolean isRobinStick(ItemStack itemStack) {
+        return itemStack.getItem() == ItemsWD.ROBIN_STICK.get();
+    }
+}

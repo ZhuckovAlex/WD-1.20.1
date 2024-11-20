@@ -125,6 +125,7 @@ public class WD
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.ROSE_OF_GHOSTY_TEARS.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.ROSE_OF_THE_MURDERER.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.MEDICAL_POTATO.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(ItemsWD.SPATIAL_ORCHID.get(), 0.2f);
 
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,
                         ItemsWD.WARPED_WART.get(), Potions.AWKWARD));

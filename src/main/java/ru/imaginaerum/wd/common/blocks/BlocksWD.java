@@ -33,6 +33,9 @@ public class BlocksWD {
     public static final RegistryObject<Block> ROSE_OF_GHOSTY_TEARS = BLOCKS.register("rose_of_ghosty_tears",
             () -> new SoulRose(BlockBehaviour.Properties.of().noCollission()
                     .randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> SPATIAL_ORCHID = BLOCKS.register("spatial_orchid",
+            () -> new SpatialOrchid(BlockBehaviour.Properties.of().noCollission()
+                    .randomTicks().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ROSE_OF_THE_MURDERER = BLOCKS.register("rose_of_the_murderer",
             () -> new RoseMurderer(BlockBehaviour.Properties.of().noCollission()
@@ -49,6 +52,12 @@ public class BlocksWD {
     // Блоки
     public static final RegistryObject<Block> SUGAR_SACK = registerBlock("sugar_sack",
             () -> new FacingBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOL).noOcclusion()));
+    public static final RegistryObject<Block> DRAGOLIT_GRID = registerBlock("dragolit_grid",
+            () -> new DragolitGrid(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2.5F).noOcclusion()));
+    public static final RegistryObject<Block> DRAGOLIT_BLOCK = registerBlock("dragolit_block",
+            () -> new DragolitBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5F).noOcclusion()));
+    public static final RegistryObject<Block> STRANGE_CHIP = registerBlock("strange_chip",
+            () -> new DragolitBlock(BlockBehaviour.Properties.of().sound(SoundType.ANCIENT_DEBRIS).strength(30F, 1200F).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<Block> A_BLOCK_OF_SPARKING_POLLEN = registerBlock("a_block_of_sparkling_pollen",
             () -> new FallingBlock(BlockBehaviour.Properties.of().strength(0.2F, 30)
                     .sound(SoundType.SAND)));
