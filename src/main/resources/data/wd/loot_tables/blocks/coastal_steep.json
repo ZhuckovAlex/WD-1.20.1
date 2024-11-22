@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "wizardry_delight:coastal_steep",
+              "name": "wd:coastal_steep",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -24,7 +24,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "wizardry_delight:coastal_steep_fibers",
+              "name": "wd:coastal_steep_fibers",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -45,7 +45,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:coastal_steep_flower"
+          "name": "wd:coastal_steep_flower"
         }
       ],
       "conditions": [
@@ -56,7 +56,7 @@
         {
           "condition": "minecraft:match_tool",
           "predicate": {
-            "tag": "wizardry_delight:knifes"
+            "tag": "wd:knifes"
           }
         }
       ]

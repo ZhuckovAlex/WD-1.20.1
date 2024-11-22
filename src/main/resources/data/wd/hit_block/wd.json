@@ -15,6 +15,22 @@
       }
     ]
   },
+  "wd:coastal_steep": {
+    "drops": [
+      {
+        "item": "wd:krutnevy_bread",
+        "min_count": 1,
+        "max_count": 3,
+        "chance": 1.0
+      },
+      {
+        "item": "wd:krutnevy_bread",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.3
+      }
+    ]
+  },
   "wd:fire_stem": {
     "drops": [
       {

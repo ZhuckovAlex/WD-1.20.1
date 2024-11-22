@@ -22,6 +22,7 @@ public class SpatialOrchid extends Block {
         super(properties);
     }
     private static final int TELEPORT_RADIUS = 300;
+
     @Override
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if (!level.isClientSide && level instanceof ServerLevel serverLevel) {
@@ -31,20 +32,19 @@ public class SpatialOrchid extends Block {
 
     private void teleportEntityRandomly(ServerLevel level, Entity entity) {
         RandomSource random = level.getRandom();
-        for (int i = 0; i < 1; i++) { // Попробовать до 10 раз найти подходящее место
-            int x = entity.blockPosition().getX() + random.nextInt(TELEPORT_RADIUS * 2) - TELEPORT_RADIUS;
-            int z = entity.blockPosition().getZ() + random.nextInt(TELEPORT_RADIUS * 2) - TELEPORT_RADIUS;
-            int y = level.getHeight() - 1; // Начинаем сверху (наибольшая высота в этом чанке)
-            BlockPos candidatePos = new BlockPos(x, y, z);
+        // Попробуем найти подходящее место для телепортации
+        int x = entity.blockPosition().getX() + random.nextInt(TELEPORT_RADIUS * 2) - TELEPORT_RADIUS;
+        int z = entity.blockPosition().getZ() + random.nextInt(TELEPORT_RADIUS * 2) - TELEPORT_RADIUS;
+        int y = level.getHeight() - 1; // Начинаем сверху (наибольшая высота в этом чанке)
+        BlockPos candidatePos = new BlockPos(x, y, z);
 
-            // Проверяем каждую позицию сверху вниз
-            while (candidatePos.getY() > level.getMinBuildHeight()) {
-                if (isValidTeleportLocation(level, candidatePos)) {
-                    entity.teleportTo(candidatePos.getX() + 0.5, candidatePos.getY() + 1, candidatePos.getZ() + 0.5);
-                    return;
-                }
-                candidatePos = candidatePos.below();
+        // Проверяем каждую позицию сверху вниз
+        while (candidatePos.getY() > level.getMinBuildHeight()) {
+            if (isValidTeleportLocation(level, candidatePos)) {
+                entity.teleportTo(candidatePos.getX() + 0.5, candidatePos.getY() + 1, candidatePos.getZ() + 0.5);
+                return; // Перемещаем игрока и выходим из цикла
             }
+            candidatePos = candidatePos.below(); // Переходим ниже, если текущая позиция не подходит
         }
     }
 
@@ -53,11 +53,13 @@ public class SpatialOrchid extends Block {
                 level.getBlockState(pos.above()).isAir() && // Над поверхностью воздух
                 level.getBlockState(pos.above(2)).isAir(); // Достаточно пространства для сущности
     }
+
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!state.canSurvive(level, pos)) {
             level.destroyBlock(pos, true);
         }
     }
+
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource source) {
         VoxelShape voxelshape = this.getShape(state, level, pos, CollisionContext.empty());
         Vec3 vec3 = voxelshape.bounds().getCenter();
@@ -69,15 +71,16 @@ public class SpatialOrchid extends Block {
             }
         }
     }
+
     public BlockState updateShape(BlockState currentBlockState, Direction direction, BlockState neighborBlockState, LevelAccessor world, BlockPos currentPos, BlockPos neighborPos) {
         if (!currentBlockState.canSurvive(world, currentPos)) {
             world.scheduleTick(currentPos, this, 1);
         }
-
         return super.updateShape(currentBlockState, direction, neighborBlockState, world, currentPos, neighborPos);
     }
+
     public boolean canSurvive(BlockState state, LevelReader levelReader, BlockPos blockPos) {
         BlockState belowBlockState = levelReader.getBlockState(blockPos.below());
-        return belowBlockState.is(Blocks.END_STONE)||belowBlockState.is(Blocks.END_STONE_BRICKS);
+        return belowBlockState.is(Blocks.END_STONE) || belowBlockState.is(Blocks.END_STONE_BRICKS);
     }
 }

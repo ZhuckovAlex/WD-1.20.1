@@ -93,6 +93,11 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.DRAGOLIT_RAPIER.get());
                         pOutput.accept(ItemsWD.HEALING_DEW.get());
                         pOutput.accept(ItemsWD.SPATIAL_ORCHID.get());
+                        pOutput.accept(ItemsWD.COASTAL_STEEP.get());
+                        pOutput.accept(ItemsWD.THE_PILLAGERS_CHEST.get());
+                        pOutput.accept(ItemsWD.GOLDEN_CHEST_KING_PILLAGER.get());
+                        pOutput.accept(ItemsWD.THE_PILLAGERS_KEY.get());
+                        pOutput.accept(ItemsWD.THE_KING_PILLAGERS_KEY.get());
 
 
                         //Blocks

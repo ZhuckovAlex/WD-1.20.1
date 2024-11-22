@@ -25,6 +25,38 @@
       }
     ]
   },
+  "farmersdelight:brown_mushroom_colony": {
+    "drops": [
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 4,
+        "max_count": 6,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:mushroom_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
+  "farmersdelight:red_mushroom_colony": {
+    "drops": [
+      {
+        "item": "farmersdelight:mushroom_rice",
+        "min_count": 4,
+        "max_count": 6,
+        "chance": 1.0
+      },
+      {
+        "item": "minecraft:mushroom_soup",
+        "min_count": 1,
+        "max_count": 2,
+        "chance": 0.2
+      }
+    ]
+  },
   "farmersdelight:carrot_crate": {
     "drops": [
       {

@@ -1,6 +1,10 @@
 {
   "variants": {
-    "":
-    {"model": "wizardry_delight:block/coastal_steep"}
+    "waterlogged=false": {
+      "model": "wd:block/coastal_steep"
+    },
+    "waterlogged=true": {
+      "model": "wd:block/coastal_steep_w"
+    }
   }
 }

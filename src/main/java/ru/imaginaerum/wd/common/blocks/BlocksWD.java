@@ -36,6 +36,9 @@ public class BlocksWD {
     public static final RegistryObject<Block> SPATIAL_ORCHID = BLOCKS.register("spatial_orchid",
             () -> new SpatialOrchid(BlockBehaviour.Properties.of().noCollission()
                     .randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> COASTAL_STEEP = BLOCKS.register("coastal_steep",
+            () -> new CoastalSteepBlock(BlockBehaviour.Properties.of().noCollission()
+                    .randomTicks().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ROSE_OF_THE_MURDERER = BLOCKS.register("rose_of_the_murderer",
             () -> new RoseMurderer(BlockBehaviour.Properties.of().noCollission()

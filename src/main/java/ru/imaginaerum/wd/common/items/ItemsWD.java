@@ -265,6 +265,8 @@ public class ItemsWD {
     // Сюда пишем растения
     public static final RegistryObject<Item> FIRE_STEM = ITEMS.register("fire_stem",
             () -> new ItemNameBlockItem(BlocksWD.FIRE_STEM.get(), (new Item.Properties().fireResistant())));
+    public static final RegistryObject<Item> COASTAL_STEEP = ITEMS.register("coastal_steep",
+            () -> new ItemNameBlockItem(BlocksWD.COASTAL_STEEP.get(), (new Item.Properties())));
 
     public static final RegistryObject<Item> ROSE_OF_THE_MURDERER = ITEMS.register("rose_of_the_murderer",
             () -> new ItemNameBlockItem(BlocksWD.ROSE_OF_THE_MURDERER.get(), (new Item.Properties().fireResistant())));
@@ -287,4 +289,14 @@ public class ItemsWD {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEALING_DEW = ITEMS.register("healing_dew",
             () -> new HealingDew(new Item.Properties()));
+
+    // Сундуки разбойников
+    public static final RegistryObject<Item> THE_PILLAGERS_CHEST = ITEMS.register("the_pillagers_chest",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> THE_PILLAGERS_KEY = ITEMS.register("the_pillagers_key",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GOLDEN_CHEST_KING_PILLAGER = ITEMS.register("golden_chest_king_pillager",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> THE_KING_PILLAGERS_KEY = ITEMS.register("the_king_pillagers_key",
+            () -> new Item(new Item.Properties()));
 }
