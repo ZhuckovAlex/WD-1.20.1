@@ -2,7 +2,6 @@ package ru.imaginaerum.wd.common.sounds;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,7 +19,8 @@ public class CustomSoundEvents {
             registerSoundEvents("flies");
     public static final RegistryObject<SoundEvent> ROBIN_STICK =
             registerSoundEvents("robin_stick");
-
+    public static final RegistryObject<SoundEvent> WD_JAM_MUSIC_DISK =
+            registerSoundEvents("wd_jam_music_disk");
 
 
 

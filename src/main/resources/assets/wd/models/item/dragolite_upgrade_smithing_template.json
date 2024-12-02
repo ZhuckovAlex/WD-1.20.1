@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wd:item/mag_elitra"
+    "layer0": "wd:item/dragolite_upgrade_smithing_template"
   }
 }

@@ -12,5 +12,5 @@ public class EffectsWD {
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, WD.MODID);
 
     public static final RegistryObject<MobEffect> FLIES = MOB_EFFECTS.register("flies",
-            () -> new FliesEffect(MobEffectCategory.HARMFUL, 0xFFFFFF));
+            () -> new FliesEffect(MobEffectCategory.HARMFUL, 0x555555));
 }

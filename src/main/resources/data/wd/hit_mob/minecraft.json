@@ -446,6 +446,22 @@
         }
       ]
     },
+    "minecraft:panda": {
+      "drops": [
+        {
+          "item": "wd:cocked_bear_meat",
+          "min_count": 1,
+          "max_count": 3,
+          "chance": 1
+        },
+        {
+          "item": "wd:bear_meat_soup",
+          "min_count": 1,
+          "max_count": 2,
+          "chance": 0.35
+        }
+      ]
+    },
     "minecraft:goat": {
       "drops": [
         {

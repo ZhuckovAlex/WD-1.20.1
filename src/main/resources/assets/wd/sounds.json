@@ -57,11 +57,11 @@
       }
     ]
   },
-  "wd_jam": {
-    "subtitle": "sounds.wd.wd_jam",
+  "wd_jam_music_disk": {
+    "subtitle": "sounds.wd.wd_jam_music_disk",
     "sounds": [
       {
-       "name": "wd:wd_jam",
+       "name": "wd:wd_jam_music_disk",
        "stream": true
       }
     ]

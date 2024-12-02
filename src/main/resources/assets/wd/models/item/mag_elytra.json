@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wd:item/wizardry_delight_jam"
+    "layer0": "wd:item/mag_elytra"
   }
 }

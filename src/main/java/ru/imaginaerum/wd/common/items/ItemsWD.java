@@ -1,14 +1,13 @@
 package ru.imaginaerum.wd.common.items;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -17,6 +16,9 @@ import ru.imaginaerum.wd.common.blocks.BlocksWD;
 import ru.imaginaerum.wd.common.blocks.custom.NetherrackBonemeal;
 import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.items.custom.*;
+import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
+
+import java.util.List;
 
 public class ItemsWD {
     public static final DeferredRegister<Item> ITEMS =
@@ -236,7 +238,8 @@ public class ItemsWD {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SPARKLING_POLLEN = ITEMS.register("sparkling_pollen",
             () -> new Item(new Item.Properties()));
-
+    public static final RegistryObject<Item> WD_JAM_MUSIC_DISK = ITEMS.register("wd_jam_music_disk",
+            () -> new RecordItem(8, CustomSoundEvents.WD_JAM_MUSIC_DISK.get(),new Item.Properties().stacksTo(1),114));
     public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone",
             () -> new SoulStone(new Item.Properties().stacksTo(1)));
 
@@ -299,4 +302,19 @@ public class ItemsWD {
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> THE_KING_PILLAGERS_KEY = ITEMS.register("the_king_pillagers_key",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> DRAGOLITE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
+            "dragolite_upgrade_smithing_template",
+            () -> new WDSmithingTemplateItem(
+                    Component.translatable("item.wd.dragolite_upgrade_apply_to").withStyle(ChatFormatting.BLUE), // displayName
+                    Component.translatable("item.wd.dragolite_upgrade_smithing_template.base_slot").withStyle(ChatFormatting.BLUE), // baseSlotDescription
+                    Component.translatable("item.wd.dragolite_upgrade_smithing_template.add_slot").withStyle(ChatFormatting.GRAY), // addSlotDescription
+                    Component.translatable("item.wd.dragolite_upgrade_smithing_template.base_tooltip"), // baseSlotTooltip
+                    Component.translatable("item.wd.dragolite_upgrade_smithing_template.add_tooltip"), // addSlotTooltip
+                    List.of(new ResourceLocation("wd:item/empty_slot_elytra")), // baseSlotIcons
+                    List.of(new ResourceLocation("minecraft:item/empty_slot_ingot")) // addSlotIcons
+            )
+    );
+    public static final RegistryObject<Item> MAG_ELYTRA = ITEMS.register("mag_elytra",
+            () -> new ModElytra(ModArmorMaterials.ELYTRA, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(1200).fireResistant()));
 }

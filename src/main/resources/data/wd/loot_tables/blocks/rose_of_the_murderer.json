@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:rose_of_the_murderer"
+          "name": "wd:rose_of_the_murderer"
         }
       ],
       "rolls": 1.0

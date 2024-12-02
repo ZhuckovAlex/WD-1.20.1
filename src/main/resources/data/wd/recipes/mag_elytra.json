@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "wd:dragolit_ingot"
+  },
+  "base": {
+    "item": "minecraft:elytra"
+  },
+  "result": {
+    "item": "wd:mag_elytra"
+  },
+  "template": {
+    "item": "wd:dragolite_upgrade_smithing_template"
+  }
+}

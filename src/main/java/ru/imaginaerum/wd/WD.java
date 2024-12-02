@@ -1,9 +1,19 @@
 package ru.imaginaerum.wd;
 
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.EntityModelSet;
+import net.minecraft.client.renderer.entity.ArmorStandRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,6 +27,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
+import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraArmorStandLayer;
+import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraLayer;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
 import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
 import ru.imaginaerum.wd.common.custom_recipes.BetterBrewingRecipe;
@@ -47,7 +60,10 @@ public class WD
 
     public WD()
     {
+
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        if(FMLEnvironment.dist.isClient()) modEventBus.addListener(this::registerElytraLayer);
         EntityTypeInit.ENTITY_TYPES.register(modEventBus);
         ItemsWD.ITEMS.register(modEventBus);
         ModParticles.PARTICLE_TYPES.register(modEventBus);
@@ -72,7 +88,8 @@ public class WD
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         DispenserRegistry.registerBehaviors();
-
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,
+                ItemsWD.WARPED_WART.get(), Potions.AWKWARD));
 
     }
 
@@ -88,6 +105,24 @@ public class WD
     public void onServerStarting(ServerStartingEvent event)
     {
 
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    private void registerElytraLayer(EntityRenderersEvent event) {
+        if(event instanceof EntityRenderersEvent.AddLayers addLayersEvent){
+            EntityModelSet entityModels = addLayersEvent.getEntityModels();
+            addLayersEvent.getSkins().forEach(s -> {
+                LivingEntityRenderer<? extends Player, ? extends EntityModel<? extends Player>> livingEntityRenderer = addLayersEvent.getSkin(s);
+                if(livingEntityRenderer instanceof PlayerRenderer playerRenderer){
+                    playerRenderer.addLayer(new DragoliteElytraLayer(playerRenderer, entityModels));
+                }
+            });
+            LivingEntityRenderer<ArmorStand, ? extends EntityModel<ArmorStand>> livingEntityRenderer = addLayersEvent.getRenderer(EntityType.ARMOR_STAND);
+            if(livingEntityRenderer instanceof ArmorStandRenderer armorStandRenderer){
+                armorStandRenderer.addLayer(new DragoliteElytraArmorStandLayer(armorStandRenderer, entityModels));
+            }
+
+        }
     }
     private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
     public static void queueServerWork(int tick, Runnable action) {
@@ -127,8 +162,7 @@ public class WD
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.MEDICAL_POTATO.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.SPATIAL_ORCHID.get(), 0.2f);
 
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,
-                        ItemsWD.WARPED_WART.get(), Potions.AWKWARD));
+
             });
         }
     }
