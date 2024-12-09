@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:meadow_golden_flower_inactive"
+          "name": "wd:meadow_golden_flower_inactive"
         }
       ],
       "rolls": 1.0

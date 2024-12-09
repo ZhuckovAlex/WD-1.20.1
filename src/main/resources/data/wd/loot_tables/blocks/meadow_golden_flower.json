@@ -2,8 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0,
       "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "wd:meadow_golden_flower",
+          "properties": {
+            "active": "true"
+          }
+        },
         {
           "condition": "minecraft:survives_explosion"
         }
@@ -14,7 +21,29 @@
           "name": "wd:meadow_golden_flower"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
+    },
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "wd:meadow_golden_flower",
+          "properties": {
+            "active": "false"
+          }
+        },
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "wd:meadow_golden_flower_inactive"
+        }
+      ],
+      "rolls": 1
     }
   ]
 }

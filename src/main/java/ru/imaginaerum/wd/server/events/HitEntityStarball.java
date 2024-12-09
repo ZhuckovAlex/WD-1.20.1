@@ -14,8 +14,13 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Bee;
+import net.minecraft.world.entity.animal.Chicken;
+import net.minecraft.world.entity.animal.Rabbit;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -88,16 +93,16 @@ public class HitEntityStarball {
                 }
                 // Проверка, является ли сущность крипером
                 if ((entity.getType() == EntityType.CREEPER)
-                        ||(entity.getType() == EntityType.VILLAGER)
-                        ||(entity.getType() == EntityType.PILLAGER)
-                        ||(entity.getType() == EntityType.VINDICATOR)
-                        ||(entity.getType() == EntityType.EVOKER)
-                        ||(entity.getType() == EntityType.WANDERING_TRADER)
+                        || (entity.getType() == EntityType.VILLAGER)
+                        || (entity.getType() == EntityType.PILLAGER)
+                        || (entity.getType() == EntityType.VINDICATOR)
+                        || (entity.getType() == EntityType.EVOKER)
+                        || (entity.getType() == EntityType.WANDERING_TRADER)
                 ) {
                     // Удаляем крипера
                     entity.discard();
 
-                        world.sendParticles(ModParticles.ROBIN_STAR_PARTICLES_PROJECTILE.get(), entity.getX(), entity.getY(), entity.getZ(), 36, 0.5, 0.5, 0.5, 0.05f);
+                    world.sendParticles(ModParticles.ROBIN_STAR_PARTICLES_PROJECTILE.get(), entity.getX(), entity.getY(), entity.getZ(), 36, 0.5, 0.5, 0.5, 0.05f);
                     // Создаём лягушку на месте крипера
                     Entity frog = EntityType.FROG.create(world);
                     if (frog != null) {
@@ -117,30 +122,42 @@ public class HitEntityStarball {
 
                 // Получение информации об entity
                 String entityId = EntityType.getKey(entity.getType()).toString();
-                if (!entities.has(entityId)&&!(entity instanceof Player player)) {
-                    double knockbackStrength = 20.0; // Увеличьте силу отталкивания до 20.0
+                if (!entities.has(entityId)
+                        && !(entity instanceof Player player)
+                        && !(entity instanceof WitherBoss witherBoss)
+                        && !(entity instanceof EnderDragon enderDragon)) {
 
-                    // Применяем отталкивание
-                    if (entity instanceof LivingEntity) {
-                        LivingEntity livingEntity = (LivingEntity) entity;
+                    // Создаем координаты для спавна
+                    double x = entity.getX();
+                    double y = entity.getY();
+                    double z = entity.getZ();
 
-                        // Вычисляем вектор отталкивания от сущности
-                        double deltaX = entity.getX() - livingEntity.getX();
-                        double deltaZ = entity.getZ() - livingEntity.getZ();
+                    // Удаляем текущую сущность
+                    entity.discard();
 
-                        // Нормализуем вектор отталкивания
-                        double distance = Math.sqrt(deltaX * deltaX + deltaZ * deltaZ);
-                        double normalizedX = deltaX / distance;
-                        double normalizedZ = deltaZ / distance;
+                    // Проверяем, является ли сущность НЕ летающей
+                    if (!(entity instanceof FlyingMob)) {
+                        // Превращаем наземных существ в кролика
+                        Rabbit rabbit = EntityType.RABBIT.create(world);
+                        if (rabbit != null) {
+                            rabbit.setPos(x, y, z);
+                            world.addFreshEntity(rabbit);
 
-                        // Умножаем на силу отталкивания
-                        // No need to redefine knockbackStrength, just use the existing one
-                        double knockbackForceX = normalizedX * knockbackStrength;
-                        double knockbackForceZ = normalizedZ * knockbackStrength;
+                            // Эффект частиц
+                            world.sendParticles(ModParticles.ROBIN_STAR_PARTICLES_PROJECTILE.get(), x, y, z, 36, 0.5, 0.5, 0.5, 0.05f);
+                        }
+                    } else {
+                        // Превращаем летающих в курицу
+                        Chicken chicken = EntityType.CHICKEN.create(world);
+                        if (chicken != null) {
+                            chicken.setPos(x, y, z);
+                            world.addFreshEntity(chicken);
 
-                        // Применяем отталкивание (вверх по Y для подъема сущности)
-                        livingEntity.push(knockbackForceX, 5, knockbackForceZ);
+                            // Эффект частиц
+                            world.sendParticles(ModParticles.ROBIN_STAR_PARTICLES_PROJECTILE.get(), x, y, z, 36, 0.5, 0.5, 0.5, 0.05f);
+                        }
                     }
+
                     return;
                 }
 

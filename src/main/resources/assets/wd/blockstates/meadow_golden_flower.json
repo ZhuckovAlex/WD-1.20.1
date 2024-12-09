@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "active=true": {
       "model": "wd:block/meadow_golden_flower"
+    },
+    "active=false": {
+      "model": "wd:block/meadow_golden_flower_inactive"
     }
   }
 }

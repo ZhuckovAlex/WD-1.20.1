@@ -83,6 +83,8 @@ public class ItemsWD {
                             .build()))));
     public static final RegistryObject<Item> MEADOW_GOLDEN_FLOWER = ITEMS.register("meadow_golden_flower",
             () -> new ItemNameBlockItem(BlocksWD.MEADOW_GOLDEN_FLOWER.get(),(new Item.Properties())));
+    public static final RegistryObject<Item> MEADOW_GOLDEN_FLOWER_INACTIVE = ITEMS.register("meadow_golden_flower_inactive",
+            () -> new ItemNameBlockItem(BlocksWD.MEADOW_GOLDEN_FLOWER.get(),(new Item.Properties())));
     public static final RegistryObject<Item> ROSE_OF_GHOSTY_TEARS = ITEMS.register("rose_of_ghosty_tears",
             () -> new ItemNameBlockItem(BlocksWD.ROSE_OF_GHOSTY_TEARS.get(),(new Item.Properties())));
     public static final RegistryObject<Item> SPATIAL_ORCHID = ITEMS.register("spatial_orchid",

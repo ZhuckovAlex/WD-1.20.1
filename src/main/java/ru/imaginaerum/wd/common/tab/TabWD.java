@@ -101,6 +101,7 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.THE_KING_PILLAGERS_KEY.get());
                         pOutput.accept(ItemsWD.MAG_ELYTRA.get());
                         pOutput.accept(ItemsWD.DRAGOLITE_UPGRADE_SMITHING_TEMPLATE.get());
+                        pOutput.accept(ItemsWD.MEADOW_GOLDEN_FLOWER.get());
 
 
                         //Blocks
@@ -110,7 +111,6 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(BlocksWD.WARPED_WART.get());
                         pOutput.accept(BlocksWD.SUGAR_SACK.get());
                         pOutput.accept(BlocksWD.A_BLOCK_OF_SPARKING_POLLEN.get());
-                        pOutput.accept(BlocksWD.MEADOW_GOLDEN_FLOWER.get());
                         pOutput.accept(BlocksWD.ROSE_OF_GHOSTY_TEARS.get());
                         pOutput.accept(BlocksWD.DRAGOLIT_GRID.get());
                         pOutput.accept(BlocksWD.DRAGOLIT_BLOCK.get());

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/tinted_cross",
   "textures": {
-    "cross": "wizardry_delight:block/meadow_golden_flower_inactive"
+    "cross": "wd:block/meadow_golden_flower_inactive"
   },
   "render_type": "cutout"
 }

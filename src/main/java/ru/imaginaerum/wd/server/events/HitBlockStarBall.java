@@ -9,27 +9,33 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.ZombieVillager;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
+import ru.imaginaerum.wd.common.blocks.custom.GoldenRose;
 import ru.imaginaerum.wd.common.blocks.custom.RottenPie;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.particles.ModParticles;
+import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -47,7 +53,7 @@ public class HitBlockStarBall {
         // Добавляем проверку на A_BLOCK_OF_SPARKING_POLLEN
         if (state.getBlock() == BlocksWD.A_BLOCK_OF_SPARKING_POLLEN.get()) {
             // Взрыв с силой 10 и типом break
-            level.explode(null, x, y, z, 10, Level.ExplosionInteraction.NONE);
+            level.explode(null, x, y, z, 10, Level.ExplosionInteraction.TNT);
             level.setBlock(pos, net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 3);
 
             Random random = new Random();
@@ -72,6 +78,31 @@ public class HitBlockStarBall {
                 level.sendParticles(ModParticles.ROBIN_STAR_PARTICLES_PROJECTILE.get(), pos.getX(), pos.getY(), pos.getZ(), 100, 2, 2, 2, 0.3f);
             }
             return; // Завершаем выполнение, так как взрыв произошел
+        }
+        if (state.getBlock() == BlocksWD.MEADOW_GOLDEN_FLOWER.get() && state.getValue(GoldenRose.ACTIVE)) {
+            // Находим все сущности зомби-жителей в радиусе 5 блоков
+            double radius = 5.0;
+            List<Entity> nearbyEntities = level.getEntities(null, new AABB(x - radius, y - radius, z - radius, x + radius, y + radius, z + radius));
+
+            for (Entity entity : nearbyEntities) {
+                if (entity instanceof ZombieVillager zombieVillager) {
+                    // Превращаем зомби-жителя в жителя
+                    Villager villager = EntityType.VILLAGER.create(level);
+                    if (villager != null) {
+                        villager.copyPosition(zombieVillager);  // Копируем позицию и ориентацию зомби-жителя
+                        level.addFreshEntity(villager);  // Добавляем жителя в мир
+                        zombieVillager.discard();  // Удаляем зомби-жителя
+                    }
+                }
+            }
+
+            // Эффект частиц для визуализации
+            level.sendParticles(ModParticles.GOLDEN_FLOWER_PARTICLES.get(), pos.getX(), pos.getY(), pos.getZ(), 1, 0.0D, 0.0D, 0.0D, 0.3f);
+            level.playSound(null, pos, CustomSoundEvents.GOLDEN_FLOWER.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
+
+            BlockState newState = state.setValue(GoldenRose.ACTIVE, false);
+            level.setBlock(pos, newState, 3);
+            return; // Завершаем выполнение после превращения зомби-жителей
         }
         if (state.getBlock() == Blocks.VINE) {
             // Замените блок vine на воздух
