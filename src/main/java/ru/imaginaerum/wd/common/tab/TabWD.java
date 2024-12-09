@@ -117,6 +117,7 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(BlocksWD.ROSE_OF_GHOSTY_TEARS.get());
                         pOutput.accept(BlocksWD.DRAGOLIT_GRID.get());
                         pOutput.accept(BlocksWD.DRAGOLIT_BLOCK.get());
+                        pOutput.accept(BlocksWD.DRAGOLITE_CAGE.get());
                         pOutput.accept(BlocksWD.STRANGE_CHIP.get());
 
 

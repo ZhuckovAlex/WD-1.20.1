@@ -220,7 +220,7 @@
   "item.wd.wd_jam": "§bRecord",
   "item.wd.wd_jam_music_disk": "§bMusic disk",
   "item.wd.wd_jam_music_disk.desc": "WD - The tale of how the mage made jam",
-  "item.wd.wd_spawner": "Dracolite cage",
+  "block.wd.dragolite_cage": "Dracolite cage",
   "item.wd.wizard_pie": "§eWizard's cake",
   "item.wd.wizard_pie_slice": "A piece of the wizard's cake",
   "wd.cleansing_decoction": "Washes away the dyes and one enchantment from the object that you hold in your other hand",

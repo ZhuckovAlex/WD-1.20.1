@@ -1,8 +1,6 @@
 {
   "values": [
     "wd:strange_chip",
-    "wd:dragolit_grid",
-    "wd:dragolite_cage",
     "wd:dragolit_block"
   ]
 }

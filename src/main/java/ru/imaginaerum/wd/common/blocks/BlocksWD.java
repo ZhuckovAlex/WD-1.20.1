@@ -54,9 +54,9 @@ public class BlocksWD {
     public static final RegistryObject<Block> SUGAR_SACK = registerBlock("sugar_sack",
             () -> new FacingBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOL).noOcclusion()));
     public static final RegistryObject<Block> DRAGOLIT_GRID = registerBlock("dragolit_grid",
-            () -> new DragolitGrid(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2.5F).noOcclusion()));
+            () -> new DragolitGrid(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2.5F).noOcclusion().requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DRAGOLIT_BLOCK = registerBlock("dragolit_block",
-            () -> new DragolitBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5F).noOcclusion()));
+            () -> new DragolitBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5F).noOcclusion().requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STRANGE_CHIP = registerBlock("strange_chip",
             () -> new DragolitBlock(BlockBehaviour.Properties.of().sound(SoundType.ANCIENT_DEBRIS).strength(30F, 1200F).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<Block> A_BLOCK_OF_SPARKING_POLLEN = registerBlock("a_block_of_sparkling_pollen",
@@ -66,6 +66,11 @@ public class BlocksWD {
             () -> new WizardPie(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.WOOL).randomTicks()));
     public static final RegistryObject<Block> ROTTEN_PIE = BLOCKS.register("rotten_pie",
             () -> new RottenPie(BlockBehaviour.Properties.of().randomTicks().strength(0.5F).sound(SoundType.WOOL)));
+
+    //Уникальные блоки
+    public static final RegistryObject<Block> DRAGOLITE_CAGE = registerBlock("dragolite_cage",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .noOcclusion().strength(4F).explosionResistance(20F).randomTicks().requiresCorrectToolForDrops()));
 
     //Торты со свечами wizard
     public static final RegistryObject<Block> CANDLE_WIZARD_PIE = registerBlock("candle_wizard_pie",
