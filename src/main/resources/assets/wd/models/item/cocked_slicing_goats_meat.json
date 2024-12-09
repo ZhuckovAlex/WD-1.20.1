@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wd:item/raw_slising_goats_meat"
+    "layer0": "wd:item/cocked_slicing_goats_meat"
   }
 }

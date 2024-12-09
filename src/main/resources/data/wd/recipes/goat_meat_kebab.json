@@ -12,12 +12,12 @@
       "item": "minecraft:stick"
     },
     {
-      "item": "wizardry_delight:pickled_shish_kebab"
+      "item": "wd:pickled_shish_kebab"
     }
 
   ],
   "result": {
-    "item": "wizardry_delight:goat_meat_kebab",
+    "item": "wd:goat_meat_kebab",
     "count": 3
   }
 }

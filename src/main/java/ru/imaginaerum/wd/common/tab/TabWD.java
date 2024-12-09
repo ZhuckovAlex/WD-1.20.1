@@ -38,6 +38,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.RAW_BEAR_MEAT.get());
                         pOutput.accept(ItemsWD.RAW_HORSE.get());
                         pOutput.accept(ItemsWD.RAW_GOATS_MEAT.get());
+                        pOutput.accept(ItemsWD.GOAT_MEAT_KEBAB.get());
+                        pOutput.accept(ItemsWD.COCKED_GOAT_MEAT_KEBAB.get());
                         pOutput.accept(ItemsWD.COCKED_BEAR_MEAT.get());
                         pOutput.accept(ItemsWD.COCKED_HORSE.get());
                         pOutput.accept(ItemsWD.COCKED_GOATS_MEAT.get());
@@ -75,8 +77,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.WD_JAM_MUSIC_DISK.get());
                         pOutput.accept(ItemsWD.CRIMSON_BONE_MEAL.get());
                         pOutput.accept(ItemsWD.WARPED_BONE_MEAL.get());
-                        pOutput.accept(ItemsWD.COCKED_SLISING_GOATS_MEAT.get());
-                        pOutput.accept(ItemsWD.RAW_SLISING_GOATS_MEAT.get());
+                        pOutput.accept(ItemsWD.COCKED_SLICING_GOATS_MEAT.get());
+                        pOutput.accept(ItemsWD.RAW_SLICING_GOATS_MEAT.get());
                         pOutput.accept(ItemsWD.COASTAL_STEEP_FIBERS.get());
                         pOutput.accept(ItemsWD.COASTAL_STEEP_FLOWER.get());
                         pOutput.accept(ItemsWD.FLAME_ARROW.get());
@@ -102,6 +104,7 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.MAG_ELYTRA.get());
                         pOutput.accept(ItemsWD.DRAGOLITE_UPGRADE_SMITHING_TEMPLATE.get());
                         pOutput.accept(ItemsWD.MEADOW_GOLDEN_FLOWER.get());
+                        pOutput.accept(ItemsWD.PICKLED_SHISH_KEBAB.get());
 
 
                         //Blocks
