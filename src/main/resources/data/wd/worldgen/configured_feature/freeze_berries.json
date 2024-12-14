@@ -9,7 +9,10 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "wd:freeze_berries"
+              "Name": "wd:freeze_berries",
+              "Properties": {
+                "age": "3"
+              }
             }
           }
         }

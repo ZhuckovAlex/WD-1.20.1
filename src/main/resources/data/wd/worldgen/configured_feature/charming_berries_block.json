@@ -9,7 +9,10 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "wd:charming_berries_block"
+              "Name": "wd:charming_berries_block",
+              "Properties": {
+                "age": "3"
+              }
             }
           }
         }

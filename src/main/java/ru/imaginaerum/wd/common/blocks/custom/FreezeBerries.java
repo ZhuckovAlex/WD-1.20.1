@@ -1,9 +1,11 @@
 package ru.imaginaerum.wd.common.blocks.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -16,6 +18,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -70,22 +73,17 @@ public class FreezeBerries extends BushBlock implements BonemealableBlock {
 
     }
 
-    public void entityInside(BlockState blockstate, Level level, BlockPos blockpos, Entity entity) {
-        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
-            entity.makeStuckInBlock(blockstate, new Vec3((double)0.8F, 0.75D, (double)0.8F));
-            if (!level.isClientSide && blockstate.getValue(AGE) > 0 && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
-                double d0 = Math.abs(entity.getX() - entity.xOld);
-                double d1 = Math.abs(entity.getZ() - entity.zOld);
-
-            }
+    @Override
+    public void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity) {
+        // Проверяем, что сущность является LivingEntity (игроки, мобы и т.д.)
+        // или что она уже находится в блоке этого типа (для предотвращения многократного применения логики).
+        if (!(entity instanceof LivingEntity) || entity.getFeetBlockState().is(this)) {
+            // Замедляем движение сущности, имитируя эффект сыпучего материала.
+            entity.makeStuckInBlock(blockState, new Vec3(0.9, 1.5, 0.9));
 
         }
-        if (!level.isClientSide ) {
-            if (entity instanceof LivingEntity) {
-                LivingEntity livingentity = (LivingEntity)entity;
-                livingentity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 45));
-            }
-        }
+        // Устанавливаем флаг, что сущность находится в сыпучем снегу.
+        entity.setIsInPowderSnow(true);
     }
 
     public InteractionResult use(BlockState p_57275_, Level p_57276_, BlockPos p_57277_, Player p_57278_, InteractionHand p_57279_, BlockHitResult p_57280_) {

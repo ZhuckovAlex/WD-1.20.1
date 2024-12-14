@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:taiga",
+  "features": "wd:charming_berries_block",
+  "step": "surface_structures"
+}

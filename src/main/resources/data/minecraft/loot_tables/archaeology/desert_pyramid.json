@@ -34,6 +34,18 @@
         },
         {
           "type": "minecraft:item",
+          "name": "wd:a_drop_of_love",
+          "weight": 2,
+          "functions": [],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:emerald"
         },
         {

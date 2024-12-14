@@ -9,7 +9,10 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "wd:poison_berry"
+              "Name": "wd:poison_berry",
+              "Properties": {
+                "age": "3"
+              }
             }
           }
         }

@@ -70,10 +70,11 @@ public class RoseMurderer extends BaseEntityBlock implements IPlantable {
         Level level = entity.level();
         BlockPos pos = entity.blockPosition();
         BlockState blockState = level.getBlockState(pos);
-
-        if (blockState.getBlock() instanceof RoseMurderer) {
-            event.getDrops().clear();
-            event.setCanceled(true);
+        if (!(entity instanceof Player)) {
+            if (blockState.getBlock() instanceof RoseMurderer) {
+                event.getDrops().clear();
+                event.setCanceled(true);
+            }
         }
     }
 

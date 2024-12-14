@@ -70,7 +70,7 @@ public class ItemsWD {
     public static final RegistryObject<Item> FREEZE_JAM = ITEMS.register("freeze_jam",
             () -> new Jam(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(10).saturationMod(0.3f)
                     .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0), 0.9F)
-                    .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2200, 0), 0.7F)
+                    .effect(new MobEffectInstance(EffectsWD.FREEZE.get(), 2200, 0), 1F)
                     .build())));
     public static final RegistryObject<Item> JAR = ITEMS.register("jar",
             () -> new Item(new Item.Properties()));
@@ -97,8 +97,7 @@ public class ItemsWD {
                     .build())));
     public static final RegistryObject<Item> FREEZE_BERRIES = ITEMS.register("freeze_berries",
             () -> new ItemNameBlockItem(BlocksWD.FREEZE_BERRIES.get(),(new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(1).alwaysEat().fast()
-                    .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1), 0.8F)
-                    .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 280, 0), 0.7F)
+                    .effect(new MobEffectInstance(EffectsWD.FREEZE.get(), 240, 0), 1F)
                     .build()))));
 
     // Мясо
@@ -304,6 +303,8 @@ public class ItemsWD {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEALING_DEW = ITEMS.register("healing_dew",
             () -> new HealingDew(new Item.Properties()));
+
+
 
     // Сундуки разбойников
     public static final RegistryObject<Item> THE_PILLAGERS_CHEST = ITEMS.register("the_pillagers_chest",

@@ -87,6 +87,7 @@ public class WD
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+
         DispenserRegistry.registerBehaviors();
         BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,
                 ItemsWD.WARPED_WART.get(), Potions.AWKWARD));

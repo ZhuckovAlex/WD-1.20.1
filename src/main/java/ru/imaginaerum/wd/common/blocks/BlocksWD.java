@@ -69,7 +69,7 @@ public class BlocksWD {
 
     //Уникальные блоки
     public static final RegistryObject<Block> DRAGOLITE_CAGE = registerBlock("dragolite_cage",
-            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+            () -> new DragoliteCage(BlockBehaviour.Properties.of().sound(SoundType.METAL)
                     .noOcclusion().strength(4F).explosionResistance(20F).randomTicks().requiresCorrectToolForDrops()));
 
     //Торты со свечами wizard

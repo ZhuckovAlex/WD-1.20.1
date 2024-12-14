@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "minecraft:taiga",
+  "biomes": "#forge:is_snowy",
   "features": "wd:freeze_berries",
   "step": "surface_structures"
 }

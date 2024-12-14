@@ -1,6 +1,19 @@
 {
   "variants": {
-    "":
-    {"model": "wd:block/dragolite_cage"}
+    "facing=north": {
+      "model": "wd:block/dragolite_cage"
+    },
+    "facing=east": {
+      "model": "wd:block/dragolite_cage",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "wd:block/dragolite_cage",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wd:block/dragolite_cage",
+      "y": 270
+    }
   }
 }

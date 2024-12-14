@@ -13,4 +13,6 @@ public class EffectsWD {
 
     public static final RegistryObject<MobEffect> FLIES = MOB_EFFECTS.register("flies",
             () -> new FliesEffect(MobEffectCategory.HARMFUL, 0x555555));
+    public static final RegistryObject<MobEffect> FREEZE = MOB_EFFECTS.register("freeze",
+            () -> new FreezeEffect(MobEffectCategory.HARMFUL, 0xADD8E6));
 }
