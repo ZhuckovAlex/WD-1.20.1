@@ -1,6 +1,6 @@
 {
   "variants": {
     "":
-    {"model": "wizardry_delight:block/dryer"}
+    {"model": "wd:block/dryer"}
   }
 }

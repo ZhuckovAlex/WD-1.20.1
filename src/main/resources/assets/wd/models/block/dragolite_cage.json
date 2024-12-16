@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "textures": {
-    "all": "wd:block/dragolite_cage"
-  },
-  "render_type": "cutout"
-}

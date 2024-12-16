@@ -1,6 +1,8 @@
 package ru.imaginaerum.wd.common.events;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +14,8 @@ import net.minecraftforge.fml.common.Mod;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import ru.imaginaerum.wd.WD;
+import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
+import ru.imaginaerum.wd.common.blocks.entity.renderer.DragoliteCageEntityRenderer;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.items.custom.SoulStone;
 import ru.imaginaerum.wd.common.particles.ModParticles;
@@ -47,5 +51,8 @@ public class ModEventClientBusEvents {
                 (stack, world, entity, seed) -> stack.getItem() instanceof SoulStone && ((SoulStone) stack.getItem()).isCharged(new ItemStack(ItemsWD.SOUL_STONE.get())) ? 1.0F : 0.0F);
 
     }
-
+    @SubscribeEvent
+    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.DRAGOLITE_CAGE_ENTITY.get(), DragoliteCageEntityRenderer::new);
+    }
 }

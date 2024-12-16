@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "wd:block/dragolite_cage",
+    "up": "wd:block/dragolite_cage_top_0",
+    "north": "wd:block/dragolite_cage_tied_2",
+    "east": "wd:block/dragolite_cage",
+    "south": "wd:block/dragolite_cage",
+    "west": "wd:block/dragolite_cage",
+    "particle": "wd:block/dragolite_cage"
+  },
+  "render_type": "cutout"
+}

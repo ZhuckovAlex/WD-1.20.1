@@ -1,18 +1,327 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "wd:block/dragolite_cage"
+    "facing=north,sparking=0,souls=0": {
+      "model": "wd:block/dragolite_cage_0_0"
     },
-    "facing=east": {
-      "model": "wd:block/dragolite_cage",
-      "y": 90
+    "facing=north,sparking=1,souls=0": {
+      "model": "wd:block/dragolite_cage_1_0"
     },
-    "facing=south": {
-      "model": "wd:block/dragolite_cage",
+    "facing=north,sparking=2,souls=0": {
+      "model": "wd:block/dragolite_cage_2_0"
+    },
+    "facing=north,sparking=3,souls=0": {
+      "model": "wd:block/dragolite_cage_3_0"
+    },
+    "facing=north,sparking=4,souls=0": {
+      "model": "wd:block/dragolite_cage_4_0"
+    },
+    "facing=north,sparking=5,souls=0": {
+      "model": "wd:block/dragolite_cage_5_0"
+    },
+    "facing=north,sparking=0,souls=1": {
+      "model": "wd:block/dragolite_cage_0_1"
+    },
+    "facing=north,sparking=1,souls=1": {
+      "model": "wd:block/dragolite_cage_1_1"
+    },
+    "facing=north,sparking=2,souls=1": {
+      "model": "wd:block/dragolite_cage_2_1"
+    },
+    "facing=north,sparking=3,souls=1": {
+      "model": "wd:block/dragolite_cage_3_1"
+    },
+    "facing=north,sparking=4,souls=1": {
+      "model": "wd:block/dragolite_cage_4_1"
+    },
+    "facing=north,sparking=5,souls=1": {
+      "model": "wd:block/dragolite_cage_5_1"
+    },
+    "facing=north,sparking=0,souls=2": {
+      "model": "wd:block/dragolite_cage_0_2"
+    },
+    "facing=north,sparking=1,souls=2": {
+      "model": "wd:block/dragolite_cage_1_2"
+    },
+    "facing=north,sparking=2,souls=2": {
+      "model": "wd:block/dragolite_cage_2_2"
+    },
+    "facing=north,sparking=3,souls=2": {
+      "model": "wd:block/dragolite_cage_3_2"
+    },
+    "facing=north,sparking=4,souls=2": {
+      "model": "wd:block/dragolite_cage_4_2"
+    },
+    "facing=north,sparking=5,souls=2": {
+      "model": "wd:block/dragolite_cage_5_2"
+    },
+    "facing=south,sparking=0,souls=0": {
+      "model": "wd:block/dragolite_cage_0_0",
+      "uvlock": true,
       "y": 180
     },
-    "facing=west": {
-      "model": "wd:block/dragolite_cage",
+    "facing=south,sparking=1,souls=0": {
+      "model": "wd:block/dragolite_cage_1_0",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=2,souls=0": {
+      "model": "wd:block/dragolite_cage_2_0",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=3,souls=0": {
+      "model": "wd:block/dragolite_cage_3_0",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=4,souls=0": {
+      "model": "wd:block/dragolite_cage_4_0",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=5,souls=0": {
+      "model": "wd:block/dragolite_cage_5_0",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=0,souls=1": {
+      "model": "wd:block/dragolite_cage_0_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=1,souls=1": {
+      "model": "wd:block/dragolite_cage_1_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=2,souls=1": {
+      "model": "wd:block/dragolite_cage_2_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=3,souls=1": {
+      "model": "wd:block/dragolite_cage_3_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=4,souls=1": {
+      "model": "wd:block/dragolite_cage_4_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=5,souls=1": {
+      "model": "wd:block/dragolite_cage_5_1",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=0,souls=2": {
+      "model": "wd:block/dragolite_cage_0_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=1,souls=2": {
+      "model": "wd:block/dragolite_cage_1_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=2,souls=2": {
+      "model": "wd:block/dragolite_cage_2_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=3,souls=2": {
+      "model": "wd:block/dragolite_cage_3_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=4,souls=2": {
+      "model": "wd:block/dragolite_cage_4_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,sparking=5,souls=2": {
+      "model": "wd:block/dragolite_cage_5_2",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=east,sparking=0,souls=0": {
+      "model": "wd:block/dragolite_cage_0_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=1,souls=0": {
+      "model": "wd:block/dragolite_cage_1_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=2,souls=0": {
+      "model": "wd:block/dragolite_cage_2_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=3,souls=0": {
+      "model": "wd:block/dragolite_cage_3_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=4,souls=0": {
+      "model": "wd:block/dragolite_cage_4_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=5,souls=0": {
+      "model": "wd:block/dragolite_cage_5_0",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=0,souls=1": {
+      "model": "wd:block/dragolite_cage_0_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=1,souls=1": {
+      "model": "wd:block/dragolite_cage_1_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=2,souls=1": {
+      "model": "wd:block/dragolite_cage_2_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=3,souls=1": {
+      "model": "wd:block/dragolite_cage_3_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=4,souls=1": {
+      "model": "wd:block/dragolite_cage_4_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=5,souls=1": {
+      "model": "wd:block/dragolite_cage_5_1",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=0,souls=2": {
+      "model": "wd:block/dragolite_cage_0_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=1,souls=2": {
+      "model": "wd:block/dragolite_cage_1_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=2,souls=2": {
+      "model": "wd:block/dragolite_cage_2_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=3,souls=2": {
+      "model": "wd:block/dragolite_cage_3_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=4,souls=2": {
+      "model": "wd:block/dragolite_cage_4_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=east,sparking=5,souls=2": {
+      "model": "wd:block/dragolite_cage_5_2",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,sparking=0,souls=0": {
+      "model": "wd:block/dragolite_cage_0_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=1,souls=0": {
+      "model": "wd:block/dragolite_cage_1_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=2,souls=0": {
+      "model": "wd:block/dragolite_cage_2_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=3,souls=0": {
+      "model": "wd:block/dragolite_cage_3_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=4,souls=0": {
+      "model": "wd:block/dragolite_cage_4_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=5,souls=0": {
+      "model": "wd:block/dragolite_cage_5_0",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=0,souls=1": {
+      "model": "wd:block/dragolite_cage_0_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=1,souls=1": {
+      "model": "wd:block/dragolite_cage_1_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=2,souls=1": {
+      "model": "wd:block/dragolite_cage_2_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=3,souls=1": {
+      "model": "wd:block/dragolite_cage_3_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=4,souls=1": {
+      "model": "wd:block/dragolite_cage_4_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=5,souls=1": {
+      "model": "wd:block/dragolite_cage_5_1",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=0,souls=2": {
+      "model": "wd:block/dragolite_cage_0_2",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=1,souls=2": {
+      "model": "wd:block/dragolite_cage_1_2",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=2,souls=2": {
+      "model": "wd:block/dragolite_cage_2_2",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=3,souls=2": {
+      "model": "wd:block/dragolite_cage_3_2",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=4,souls=2": {
+      "model": "wd:block/dragolite_cage_4_2",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west,sparking=5,souls=2": {
+      "model": "wd:block/dragolite_cage_5_2",
+      "uvlock": true,
       "y": 270
     }
   }

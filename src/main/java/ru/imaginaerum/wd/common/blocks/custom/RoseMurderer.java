@@ -102,6 +102,7 @@ public class RoseMurderer extends BaseEntityBlock implements IPlantable {
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!state.canSurvive(level, pos)) {
             level.destroyBlock(pos, true);
+            return;
         }
         WD.queueServerWork(140, () -> {
             level.setBlock(pos, state.setValue(IS_SOUL, false), 3);
