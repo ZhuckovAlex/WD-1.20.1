@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -23,28 +24,32 @@ public class DragoliteCageEntityRenderer implements BlockEntityRenderer<Dragolit
     @Override
     public void render(DragoliteCageBlockEntity blockEntity, float partialTick, PoseStack poseStack,
                        MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
-        // Получаем значение из тега soul_first
-        String soulFirst = blockEntity.getSoulFirst();
+        String soulFirst = blockEntity.getSoulsTwo();
 
-        // Если значение не пустое
         if (soulFirst != null && !soulFirst.isEmpty()) {
-            // Преобразуем soulFirst в EntityType с помощью ResourceLocation
-            Optional<EntityType<?>> entityTypeOptional = EntityType.byString(soulFirst);
+            StringTag soulFirstTag = StringTag.valueOf(soulFirst);
 
-            // Если сущность с таким типом существует
+            Optional<EntityType<?>> entityTypeOptional = EntityType.byString(soulFirstTag.getAsString());
             if (entityTypeOptional.isPresent()) {
-                // Создаем сущность на основе найденного типа
                 Entity entity = entityTypeOptional.get().create(Minecraft.getInstance().level);
 
                 if (entity != null) {
-                    // Получаем рендерер для этой сущности
+                    float scale = 0.53125F;
+                    float maxDimension = Math.max(entity.getBbWidth(), entity.getBbHeight());
+                    if (maxDimension > 1.0F) {
+                        scale /= maxDimension;
+                    }
+
+                    float spin = ((blockEntity.getLevel().getGameTime() + partialTick) * 25) % 360; // Ускоренное вращение
                     EntityRenderer<? super Entity> entityRenderer = Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(entity);
 
-                    // Позиционируем сущность немного выше и рядом с блоком
                     poseStack.pushPose();
-                    poseStack.translate(0.5D, 1.0D, 0.5D); // Позиция для сущности (немного выше блока)
+                    poseStack.translate(0.5D, 0.4D, 0.5D); // Позиция в центре блока
+                    poseStack.scale(scale, scale, scale); // Масштабирование
+                    poseStack.mulPose(com.mojang.math.Axis.YP.rotationDegrees(spin)); // Вращение вокруг оси Y
+                    poseStack.translate(0.0F, -0.2F, 0.0F); // Сдвиг для наклона
+                    poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(-30.0F)); // Наклон на оси X
 
-                    // Рендерим сущность с использованием рендерера
                     entityRenderer.render(entity, 0, partialTick, poseStack, bufferSource, packedLight);
                     poseStack.popPose();
                 }

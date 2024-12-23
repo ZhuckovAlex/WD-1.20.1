@@ -4,28 +4,84 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ru.imaginaerum.wd.common.blocks.custom.DragolitGrid;
+import ru.imaginaerum.wd.common.blocks.custom.DragoliteCage;
 
 public class DragoliteCageBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer {
-    private String soulFirst = "bat";
-    private String soulSecond = "";
+
+    private String soulFirst = ""; // Первая душа
+    private String soulSecond = ""; // Вторая душа
+
+    private String soulsTwo = "";
 
     public DragoliteCageBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.DRAGOLITE_CAGE_ENTITY.get(), pos, state);
     }
 
     @Override
-    protected Component getDefaultName() {
-        return null;
+    protected void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+        tag.putString("soul_first", soulFirst); // Сохраняем значение первой души
+        tag.putString("soul_second", soulSecond); // Сохраняем значение второй души
     }
+
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        if (tag.contains("soul_first")) {
+            soulFirst = tag.getString("soul_first"); // Извлекаем значение первой души из тега
+        }
+        if (tag.contains("soul_second")) {
+            soulSecond = tag.getString("soul_second"); // Извлекаем значение второй души из тега
+        }
+    }
+
+    public String getSoulsTwo() {
+        if (soulFirst.equals(soulSecond)) {
+            soulsTwo = soulFirst; // Устанавливаем значение soulsTwo равным первой душе
+        } else {
+            soulsTwo = ""; // Если души не равны, очищаем значение
+        }
+        return soulsTwo; // Возвращаем значение soulsTwo
+    }
+    public void setSoulFirst(String soulFirst) {
+        this.soulFirst = soulFirst;
+        setChanged(); // Уведомляем Minecraft о том, что данные изменились
+    }
+    public String getSoulFirst() {
+        return soulFirst; // Возвращаем значение первой души
+    }
+    public void setSoulSecond(String soulSecond) {
+        this.soulSecond = soulSecond;
+        setChanged(); // Уведомляем Minecraft о том, что данные изменились
+    }
+    public String getSoulSecond() {
+        return soulSecond; // Возвращаем значение второй души
+    }
+
+
+
+
+
+    @Override
+    protected Component getDefaultName() {
+        return Component.literal("Dragolite Cage");
+    }
+
 
     @Override
     protected AbstractContainerMenu createMenu(int i, Inventory inventory) {
@@ -84,32 +140,19 @@ public class DragoliteCageBlockEntity extends BaseContainerBlockEntity implement
     @Override
     public void clearContent() {
     }
-
     @Override
-    public void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        tag.putString("soul_first", soulFirst);  // Сохраняем первый дух (сущность)
-        tag.putString("soul_second", soulSecond);  // Сохраняем второй дух (сущность)
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = super.getUpdateTag();
+        saveAdditional(tag);
+        return tag;
     }
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        soulFirst = tag.getString("soul_first");  // Загружаем первый дух (сущность)
-        soulSecond = tag.getString("soul_second");  // Загружаем второй дух (сущность)
+    public void handleUpdateTag(CompoundTag tag) {
+        load(tag);
     }
-    public String getSoulFirst() {
-        return soulFirst;
-    }
-
-    public void setSoulFirst(String soulFirst) {
-        this.soulFirst = soulFirst;
-    }
-
-    public String getSoulSecond() {
-        return soulSecond;
-    }
-
-    public void setSoulSecond(String soulSecond) {
-        this.soulSecond = soulSecond;
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 }

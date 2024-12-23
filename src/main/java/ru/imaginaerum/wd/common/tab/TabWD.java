@@ -77,6 +77,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.WD_JAM_MUSIC_DISK.get());
                         pOutput.accept(ItemsWD.CRIMSON_BONE_MEAL.get());
                         pOutput.accept(ItemsWD.WARPED_BONE_MEAL.get());
+                        pOutput.accept(ItemsWD.GRASS_BONE_MEAL.get());
+                        pOutput.accept(ItemsWD.MYCELIUM_BONE_MEAL.get());
                         pOutput.accept(ItemsWD.COCKED_SLICING_GOATS_MEAT.get());
                         pOutput.accept(ItemsWD.RAW_SLICING_GOATS_MEAT.get());
                         pOutput.accept(ItemsWD.COASTAL_STEEP_FIBERS.get());

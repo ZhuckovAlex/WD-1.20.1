@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.imaginaerum.wd.WD;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
-import ru.imaginaerum.wd.common.blocks.custom.NetherrackBonemeal;
+import ru.imaginaerum.wd.common.items.custom.NetherrackBonemeal;
 import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.items.custom.*;
 import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
@@ -271,6 +271,10 @@ public class ItemsWD {
             () -> new NetherrackBonemeal(new Item.Properties(), Blocks.CRIMSON_NYLIUM));
     public static final RegistryObject<Item> WARPED_BONE_MEAL = ITEMS.register("warped_bone_meal",
             () -> new NetherrackBonemeal(new Item.Properties(), Blocks.WARPED_NYLIUM));
+    public static final RegistryObject<Item> GRASS_BONE_MEAL = ITEMS.register("grass_bone_meal",
+            () -> new DirtBonemeal(new Item.Properties(), Blocks.GRASS_BLOCK));
+    public static final RegistryObject<Item> MYCELIUM_BONE_MEAL = ITEMS.register("mycelium_bone_meal",
+            () -> new DirtBonemeal(new Item.Properties(), Blocks.MYCELIUM));
 
     // Ванила + растения
     public static final RegistryObject<Item> WARPED_WART = ITEMS.register("warped_wart",

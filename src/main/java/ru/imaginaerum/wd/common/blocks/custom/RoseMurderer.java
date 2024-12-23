@@ -104,13 +104,23 @@ public class RoseMurderer extends BaseEntityBlock implements IPlantable {
             level.destroyBlock(pos, true);
             return;
         }
+
+        // Если блок был уже удалён, не восстанавливать его
+        BlockState currentBlockState = level.getBlockState(pos);
+        if (currentBlockState.getBlock() != this) {
+            return;
+        }
+
         WD.queueServerWork(140, () -> {
-            level.setBlock(pos, state.setValue(IS_SOUL, false), 3);
-            BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity != null) {
-                blockEntity.getPersistentData().remove("entity_type");
-                blockEntity.getPersistentData().remove("entity_name");
-                level.sendBlockUpdated(pos, blockEntity.getBlockState(), blockEntity.getBlockState(), 3);
+            // Только восстанавливать, если блок не был разрушен
+            if (level.getBlockState(pos).getBlock() == this) {
+                level.setBlock(pos, state.setValue(IS_SOUL, false), 3);
+                BlockEntity blockEntity = level.getBlockEntity(pos);
+                if (blockEntity != null) {
+                    blockEntity.getPersistentData().remove("entity_type");
+                    blockEntity.getPersistentData().remove("entity_name");
+                    level.sendBlockUpdated(pos, blockEntity.getBlockState(), blockEntity.getBlockState(), 3);
+                }
             }
         });
     }
