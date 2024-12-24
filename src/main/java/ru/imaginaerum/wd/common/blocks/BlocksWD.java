@@ -83,7 +83,6 @@ public class BlocksWD {
             () -> new CandleWizardPie(Blocks.YELLOW_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> RED_CANDLE_WIZARD_PIE = registerBlock("red_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.RED_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
-
     public static final RegistryObject<Block> ORANGE_CANDLE_WIZARD_PIE = registerBlock("orange_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.ORANGE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> PINK_CANDLE_WIZARD_PIE = registerBlock("pink_candle_wizard_pie",
@@ -92,7 +91,6 @@ public class BlocksWD {
             () -> new CandleWizardPie(Blocks.PURPLE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> MAGENTA_CANDLE_WIZARD_PIE = registerBlock("magenta_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.MAGENTA_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
-
     public static final RegistryObject<Block> GRAY_CANDLE_WIZARD_PIE = registerBlock("gray_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.GRAY_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> CYAN_CANDLE_WIZARD_PIE = registerBlock("cyan_candle_wizard_pie",
@@ -101,7 +99,6 @@ public class BlocksWD {
             () -> new CandleWizardPie(Blocks.BLUE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> BROWN_CANDLE_WIZARD_PIE = registerBlock("brown_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.BROWN_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
-
     public static final RegistryObject<Block> GREEN_CANDLE_WIZARD_PIE = registerBlock("green_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.GREEN_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> LIME_CANDLE_WIZARD_PIE = registerBlock("lime_candle_wizard_pie",
