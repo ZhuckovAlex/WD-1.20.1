@@ -110,6 +110,10 @@ public class BlocksWD {
             () -> new CandleWizardPie(Blocks.LIGHT_BLUE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
     public static final RegistryObject<Block> LIGHT_GRAY_CANDLE_WIZARD_PIE = registerBlock("light_gray_candle_wizard_pie",
             () -> new CandleWizardPie(Blocks.LIGHT_GRAY_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+
+    //Яблоня
+
     //Метод регистрации блоков
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
