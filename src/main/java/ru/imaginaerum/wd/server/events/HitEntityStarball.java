@@ -12,10 +12,7 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.FlyingMob;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Rabbit;
@@ -167,6 +164,19 @@ public class HitEntityStarball {
                     ItemStack sparklingPollenStack = new ItemStack(ItemsWD.SPARKLING_POLLEN.get(), 1); // 1 штука
                     ItemEntity sparklingPollenEntity = new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(), sparklingPollenStack);
                     world.addFreshEntity(sparklingPollenEntity);
+                }
+                // Выпадение сфер опыта
+                JsonObject experience = entityData.getAsJsonObject("experience");
+                if (experience != null) {
+                    int minExp = experience.get("min").getAsInt();
+                    int maxExp = experience.get("max").getAsInt();
+                    int expCount = new Random().nextInt((maxExp - minExp) + 1) + minExp;
+
+                    // Создание сфер опыта
+                    for (int i = 0; i < expCount; i++) {
+                        ExperienceOrb experienceOrb = new ExperienceOrb(world, entity.getX(), entity.getY(), entity.getZ(), expCount);
+                        world.addFreshEntity(experienceOrb);
+                    }
                 }
                 if (dropsElement != null && dropsElement.isJsonArray()) {
                     dropsElement.getAsJsonArray().forEach(dropElement -> {

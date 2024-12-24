@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
@@ -28,6 +29,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
@@ -61,38 +63,68 @@ public class DragoliteCage extends BaseEntityBlock {
             if (!soulFirst.isEmpty() && soulFirst.equals(soulSecond)) {
                 // Уменьшаем уровень SPARKING с шансом 30%
                 if (state.getValue(SPARKING) > 0) {
-                    if (random.nextInt(100) < 45) { // шанс 30%
-                        int currentSparking = state.getValue(SPARKING);
-                        level.playSound(null, pos, SoundEvents.SAND_BREAK, SoundSource.BLOCKS, 1, 1);
-
-                        if (currentSparking > 0) {
-                            level.setBlock(pos, state.setValue(SPARKING, currentSparking - 1), 3);
-                        }
-                    }
-
-
-                    // Спавним сущности вокруг блока в радиусе 5 блоков
-                    for (int i = 0; i < 1; i++) { // спауним 10 мобов для примера
+                    for (int i = 0; i < 1; i++) { // спауним 1 моба для примера
                         double x = pos.getX() + (random.nextDouble() * 10 - 5); // случайная позиция в радиусе 5 блоков
-                        double y = pos.getY();
+                        double y = pos.getY() + (random.nextInt(11) - 5);
                         double z = pos.getZ() + (random.nextDouble() * 10 - 5);
                         BlockPos spawnPos = new BlockPos((int) x, (int) y, (int) z);
 
-                        // Проверка на наличие подходящей поверхности для спауна
-                        if (level.getBlockState(spawnPos.below()).isSolidRender(level, spawnPos)) {
-                            // Получаем тип сущности по ID из soulFirst
-                            EntityType<?> entityType = EntityType.byString(soulFirst).orElse(null);
-                            if (entityType != null) {
-                                // Создаем сущность и устанавливаем ее в нужную позицию
-                                Entity entity = entityType.create(level);
-                                if (entity != null) {
-                                    entity.moveTo(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), 0, 0);
-                                    level.addFreshEntity(entity);
+                        // Получаем тип сущности по ID из soulFirst
+                        EntityType<?> entityType = EntityType.byString(soulFirst).orElse(null);
+                        if (entityType != null) {
+                            Entity entity = entityType.create(level);
+                            if (entity != null) {
+                                boolean isWaterAnimal = entity instanceof WaterAnimal;
+
+                                if (isWaterAnimal) {
+                                    // Проверка на наличие воды
+                                    if (level.getBlockState(spawnPos).getFluidState().isSource()) {
+                                        spawnEntityInWater(level, spawnPos, entity, state, pos, random);
+                                    }
+                                } else {
+                                    // Проверка на наличие подходящей поверхности
+                                    if (level.getBlockState(spawnPos.below()).isSolid()) {
+                                        spawnEntityOnLand(level, spawnPos, entity, state, pos, random);
+                                    }
                                 }
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    private void spawnEntityOnLand(ServerLevel level, BlockPos spawnPos, Entity entity, BlockState state, BlockPos blockPos, RandomSource random) {
+        // Получаем самую верхнюю позицию для спауна
+        int highestY = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, spawnPos.getX(), spawnPos.getZ());
+        BlockPos topPos = new BlockPos(spawnPos.getX(), highestY, spawnPos.getZ());
+
+        // Перемещаем сущность на верхнюю точку
+        entity.moveTo(topPos.getX(), topPos.getY(), topPos.getZ(), 0, 0);
+
+        // Проверяем, что на этом месте можно разместить моба
+        if (level.getBlockState(topPos).isAir() && level.getBlockState(topPos.below()).isSolid()) {
+            level.addFreshEntity(entity);
+
+            if (random.nextInt(100) < 45) { // шанс 45%
+                int currentSparking = state.getValue(SPARKING);
+                if (currentSparking > 0) {
+                    level.setBlock(blockPos, state.setValue(SPARKING, currentSparking - 1), 3);
+                    level.playSound(null, blockPos, SoundEvents.SAND_BREAK, SoundSource.BLOCKS, 1, 1);
+                }
+            }
+        }
+    }
+
+    private void spawnEntityInWater(ServerLevel level, BlockPos spawnPos, Entity entity, BlockState state, BlockPos blockPos, RandomSource random) {
+        entity.moveTo(spawnPos.getX() + 0.5, spawnPos.getY(), spawnPos.getZ() + 0.5, 0, 0);
+        level.addFreshEntity(entity);
+        if (random.nextInt(100) < 45) { // шанс 45%
+            int currentSparking = state.getValue(SPARKING);
+            if (currentSparking > 0) {
+                level.setBlock(blockPos, state.setValue(SPARKING, currentSparking - 1), 3);
+                level.playSound(null, blockPos, SoundEvents.SAND_BREAK, SoundSource.BLOCKS, 1, 1);
             }
         }
     }
@@ -169,9 +201,7 @@ public class DragoliteCage extends BaseEntityBlock {
         // Проверка на предмет RobinStick
         if (player.getItemInHand(hand).is(ItemsWD.ROBIN_STICK.get())) {
             handleRobinStick(state, level, pos, player, hand);
-        }
-        if (player.getItemInHand(hand).is(Items.STICK)) {
-            handleStickClick(level, pos, player);
+            player.swing(hand);
         }
 
         level.sendBlockUpdated(pos, state, state, 3);
@@ -434,21 +464,7 @@ public class DragoliteCage extends BaseEntityBlock {
         }
     }
 
-    private void handleStickClick(Level level, BlockPos pos, Player player) {
-        if (!level.isClientSide) {
-            BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity != null) {
-                CompoundTag blockTag = blockEntity.getPersistentData();
-                String soulFirst = blockTag.getString("soul_first");
-                String soulSecond = blockTag.getString("soul_second");
 
-                player.displayClientMessage(
-                        Component.literal("Soul First: " + (soulFirst.isEmpty() ? "None" : soulFirst) + ", Soul Second: " + (soulSecond.isEmpty() ? "None" : soulSecond)),
-                        true
-                );
-            }
-        }
-    }
 
 
     @Override

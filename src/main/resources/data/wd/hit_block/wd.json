@@ -13,7 +13,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "wd:coastal_steep": {
     "drops": [
@@ -29,7 +29,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "wd:fire_stem": {
     "drops": [
@@ -45,7 +45,7 @@
         "max_count": 2,
         "chance": 0.35
       }
-    ]
+    ],"experience": 5
   },
   "wd:charming_berries_block": {
     "drops": [
@@ -61,7 +61,7 @@
         "max_count": 2,
         "chance": 0.35
       }
-    ]
+    ],"experience": 5
   },
   "wd:poison_berry": {
     "drops": [
@@ -77,6 +77,6 @@
         "max_count": 2,
         "chance": 0.35
       }
-    ]
+    ],"experience": 5
   }
 }

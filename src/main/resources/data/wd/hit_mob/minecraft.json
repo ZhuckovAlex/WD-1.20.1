@@ -14,7 +14,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 3
+      }
     },
     "minecraft:husk": {
       "drops": [
@@ -30,7 +34,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 3
+      }
     },
     "minecraft:drowned": {
       "drops": [
@@ -46,7 +54,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 5
+      }
     },
     "minecraft:wolf": {
       "drops": [
@@ -56,7 +68,11 @@
           "max_count": 1,
           "chance": 1
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 2
+      }
     },
     "minecraft:zombie_villager": {
       "drops": [
@@ -72,7 +88,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 5
+      }
     },
     "minecraft:blaze": {
       "drops": [
@@ -88,7 +108,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:witch": {
       "drops": [
@@ -104,7 +128,11 @@
           "max_count": 3,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:skeleton": {
       "drops": [
@@ -126,7 +154,11 @@
           "max_count": 1,
           "chance": 0.02
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 5
+      }
     },
     "minecraft:wither_skeleton": {
       "drops": [
@@ -148,7 +180,11 @@
           "max_count": 1,
           "chance": 0.05
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:stray": {
       "drops": [
@@ -164,7 +200,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:hoglin": {
       "drops": [
@@ -186,7 +226,11 @@
           "max_count": 2,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 6,
+        "max": 9
+      }
     },
     "minecraft:cow": {
       "drops": [
@@ -208,7 +252,11 @@
           "max_count": 2,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 2
+      }
     },
     "minecraft:enderman": {
       "drops": [
@@ -224,7 +272,11 @@
           "max_count": 3,
           "chance": 0.05
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:mooshroom": {
       "drops": [
@@ -252,7 +304,11 @@
           "max_count": 2,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 3,
+        "max": 6
+      }
     },
     "minecraft:rabbit": {
       "drops": [
@@ -268,7 +324,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 2
+      }
     },
     "minecraft:turtle": {
       "drops": [
@@ -284,7 +344,10 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],"experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:sheep": {
       "drops": [
@@ -300,7 +363,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:chicken": {
       "drops": [
@@ -316,7 +383,11 @@
           "max_count": 2,
           "chance": 0.2
         }
-      ]
+      ],
+      "experience": {
+        "min": 1,
+        "max": 2
+      }
     },
     "minecraft:pig": {
       "drops": [
@@ -332,7 +403,11 @@
           "max_count": 2,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:bee": {
       "drops": [
@@ -348,7 +423,11 @@
           "max_count": 2,
           "chance": 0.3
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:cod": {
       "drops": [
@@ -364,7 +443,11 @@
           "max_count": 2,
           "chance": 0.45
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:salmon": {
       "drops": [
@@ -380,7 +463,11 @@
           "max_count": 2,
           "chance": 0.45
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:tropical_fish": {
       "drops": [
@@ -396,7 +483,11 @@
           "max_count": 2,
           "chance": 0.45
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:squid": {
       "drops": [
@@ -412,7 +503,11 @@
           "max_count": 2,
           "chance": 0.45
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:glow_squid": {
       "drops": [
@@ -428,7 +523,11 @@
           "max_count": 2,
           "chance": 0.45
         }
-      ]
+      ],
+      "experience": {
+        "min": 4,
+        "max": 6
+      }
     },
     "minecraft:polar_bear": {
       "drops": [
@@ -444,7 +543,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 8
+      }
     },
     "minecraft:panda": {
       "drops": [
@@ -460,7 +563,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:goat": {
       "drops": [
@@ -476,7 +583,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 4,
+        "max": 6
+      }
     },
     "minecraft:frog": {
       "drops": [
@@ -492,7 +603,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 2,
+        "max": 3
+      }
     },
     "minecraft:horse": {
       "drops": [
@@ -508,7 +623,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 4,
+        "max": 6
+      }
     },
     "minecraft:mule": {
       "drops": [
@@ -524,7 +643,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 4,
+        "max": 6
+      }
     },
     "minecraft:donkey": {
       "drops": [
@@ -540,7 +663,11 @@
           "max_count": 2,
           "chance": 0.35
         }
-      ]
+      ],
+      "experience": {
+        "min": 4,
+        "max": 6
+      }
     }
   }
 }

@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.ZombieVillager;
@@ -65,6 +66,7 @@ public class HitBlockStarBall {
             }
             return; // Завершаем выполнение, так как взрыв произошел
         }
+
         if (state.getBlock() == BlocksWD.WIZARD_PIE.get()) {
             // Взрыв с силой 10 и типом break
             level.explode(null, x, y, z, 4, Level.ExplosionInteraction.NONE);
@@ -204,6 +206,10 @@ public class HitBlockStarBall {
         if (new Random().nextFloat() <= 0.30f) {
             ItemStack sparklingPollenStack = new ItemStack(ItemsWD.SPARKLING_POLLEN.get(), 1); // 1 штука
             Block.popResource(level, pos, sparklingPollenStack);
+        }
+        if (blockConfig.has("experience")) {
+            int experienceAmount = blockConfig.get("experience").getAsInt();
+            level.addFreshEntity(new ExperienceOrb(level, pos.getX(), pos.getY(), pos.getZ(), experienceAmount));
         }
         // Получаем массив дропов
         for (var drop : blockConfig.getAsJsonArray("drops")) {

@@ -11,7 +11,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import ru.imaginaerum.wd.common.blocks.custom.DragoliteCage;
 import ru.imaginaerum.wd.server.events.StrikeRobinStick;
 
 import javax.annotation.Nullable;
@@ -32,6 +35,20 @@ public class StarBallItem extends Item {
             components.add(Component.translatable("wd.press_shift").withStyle(ChatFormatting.DARK_GRAY));
         }
         super.appendHoverText(stack, level, components, flag);
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        // Получаем информацию о блоке, на который кликают
+        Block block = context.getLevel().getBlockState(context.getClickedPos()).getBlock();
+
+        // Проверяем, является ли блок стеклом
+        if (block instanceof DragoliteCage) {
+            return InteractionResult.FAIL; // Возвращаем FAIL, если это стекло
+        }
+
+        // В остальных случаях вызываем реализацию родительского метода
+        return super.useOn(context);
     }
 
     @Override

@@ -7,7 +7,7 @@
         "max_count": 3,
         "chance": 1.0
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:beetroot_crate": {
     "drops": [
@@ -23,7 +23,7 @@
         "max_count": 2,
         "chance": 0.2
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:brown_mushroom_colony": {
     "drops": [
@@ -39,7 +39,7 @@
         "max_count": 2,
         "chance": 0.2
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:red_mushroom_colony": {
     "drops": [
@@ -55,7 +55,7 @@
         "max_count": 2,
         "chance": 0.2
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:carrot_crate": {
     "drops": [
@@ -65,7 +65,7 @@
         "max_count": 6,
         "chance": 1.0
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:cabbage_crate": {
     "drops": [
@@ -75,7 +75,7 @@
         "max_count": 8,
         "chance": 1.0
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:onion_crate": {
     "drops": [
@@ -91,7 +91,7 @@
         "max_count": 4,
         "chance": 0.4
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:tomato_crate": {
     "drops": [
@@ -101,7 +101,7 @@
         "max_count": 7,
         "chance": 1.0
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:potato_crate": {
     "drops": [
@@ -117,7 +117,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:rice_bale": {
     "drops": [
@@ -133,7 +133,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:rice_bag": {
     "drops": [
@@ -149,7 +149,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_cabbages": {
     "drops": [
@@ -165,7 +165,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:cabbages": {
     "drops": [
@@ -181,7 +181,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_tomatoes": {
     "drops": [
@@ -197,7 +197,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:tomatoes": {
     "drops": [
@@ -213,7 +213,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_onions": {
     "drops": [
@@ -229,7 +229,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:onions": {
     "drops": [
@@ -245,7 +245,7 @@
         "max_count": 2,
         "chance": 0.3
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_carrots": {
     "drops": [
@@ -261,7 +261,7 @@
         "max_count": 3,
         "chance": 0.30
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_potatoes": {
     "drops": [
@@ -277,7 +277,7 @@
         "max_count": 3,
         "chance": 0.30
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_rice": {
     "drops": [
@@ -293,7 +293,7 @@
         "max_count": 3,
         "chance": 0.30
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:rice": {
     "drops": [
@@ -309,7 +309,7 @@
         "max_count": 3,
         "chance": 0.30
       }
-    ]
+    ],"experience": 5
   },
   "farmersdelight:wild_beetroots": {
     "drops": [
@@ -325,6 +325,6 @@
         "max_count": 2,
         "chance": 0.4
       }
-    ]
+    ],"experience": 5
   }
 }
