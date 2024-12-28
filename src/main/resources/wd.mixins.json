@@ -3,7 +3,7 @@
   "package": "ru.imaginaerum.wd.common.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "refmap": "wd.refmap.json",
+  "refmap": "wd_forge.refmap.json",
   "mixins": [
     "LivingEntityMixin"
   ],
