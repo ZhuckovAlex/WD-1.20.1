@@ -1,6 +1,7 @@
 {
   "variants": {
-    "":
-    {"model": "wizardry_delight:block/apple_leaves"}
+    "": {
+      "model": "wd:block/apple_leaves"
+    }
   }
 }

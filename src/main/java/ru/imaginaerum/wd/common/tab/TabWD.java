@@ -97,6 +97,7 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.CLEAR_DRAGOLIT_NUGGET.get());
                         pOutput.accept(ItemsWD.DRAGOLIT_RAPIER.get());
                         pOutput.accept(ItemsWD.HEALING_DEW.get());
+                        pOutput.accept(ItemsWD.HEALING_DEW_NETHER.get());
                         pOutput.accept(ItemsWD.SPATIAL_ORCHID.get());
                         pOutput.accept(ItemsWD.COASTAL_STEEP.get());
                         pOutput.accept(ItemsWD.THE_PILLAGERS_CHEST.get());
@@ -107,7 +108,11 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.DRAGOLITE_UPGRADE_SMITHING_TEMPLATE.get());
                         pOutput.accept(ItemsWD.MEADOW_GOLDEN_FLOWER.get());
                         pOutput.accept(ItemsWD.PICKLED_SHISH_KEBAB.get());
-
+                        pOutput.accept(ItemsWD.APPLE_SAPLING.get());
+                        pOutput.accept(ItemsWD.APPLE_LEAVES.get());
+                        pOutput.accept(ItemsWD.APPLE_LEAVES_STAGES.get());
+                        pOutput.accept(ItemsWD.APPLE_SIGN.get());
+                        pOutput.accept(ItemsWD.APPLE_HANGING_SIGN.get());
 
                         //Blocks
                         pOutput.accept(BlocksWD.FIRE_STEM.get());
@@ -121,7 +126,19 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(BlocksWD.DRAGOLIT_BLOCK.get());
                         pOutput.accept(BlocksWD.DRAGOLITE_CAGE.get());
                         pOutput.accept(BlocksWD.STRANGE_CHIP.get());
-
+                        pOutput.accept(BlocksWD.APPLE_LOG.get());
+                        pOutput.accept(BlocksWD.APPLE_WOOD.get());
+                        pOutput.accept(BlocksWD.STRIPPED_APPLE_LOG.get());
+                        pOutput.accept(BlocksWD.STRIPPED_APPLE_WOOD.get());
+                        pOutput.accept(BlocksWD.APPLE_PLANKS.get());
+                        pOutput.accept(BlocksWD.APPLE_STAIRS.get());
+                        pOutput.accept(BlocksWD.APPLE_SLAB.get());
+                        pOutput.accept(BlocksWD.APPLE_FENCE.get());
+                        pOutput.accept(BlocksWD.APPLE_FENCE_GATE.get());
+                        pOutput.accept(BlocksWD.APPLE_BUTTON.get());
+                        pOutput.accept(BlocksWD.APPLE_PRESSURE_PLATE.get());
+                        pOutput.accept(BlocksWD.APPLE_DOOR.get());
+                        pOutput.accept(BlocksWD.APPLE_TRAPDOOR.get());
 
                     })
                     .build());

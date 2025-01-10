@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "wd:block/apple_leaves_s_0"
+    },
+    "stage=1": {
+      "model": "wd:block/apple_leaves_s_1"
+    },
+    "stage=2": {
+      "model": "wd:block/apple_leaves_s_2"
+    },
+    "stage=3": {
+      "model": "wd:block/apple_leaves_s_3"
+    }
+
+  }
+}

@@ -3,7 +3,7 @@
   "group": "wooden_trapdoor",
   "key": {
     "#": {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "wizardry_delight:apple_trapdoor"
+    "item": "wd:apple_trapdoor"
   }
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:apple_sapling"
+          "name": "wd:apple_sapling"
         }
       ],
       "rolls": 1.0

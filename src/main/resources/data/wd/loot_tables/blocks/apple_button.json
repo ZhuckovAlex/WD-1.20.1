@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:apple_button"
+          "name": "wd:apple_button"
         }
       ],
       "rolls": 1.0

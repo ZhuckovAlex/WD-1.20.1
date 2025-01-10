@@ -1,7 +1,8 @@
+
 {
   "variants": {
     "": {
-      "model": "wizardry_delight:block/apple_sign"
+      "model": "wd:block/apple_wall_sign"
     }
   }
 }

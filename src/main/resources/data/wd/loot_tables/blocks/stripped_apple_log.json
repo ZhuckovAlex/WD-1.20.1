@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:stripped_apple_log"
+          "name": "wd:stripped_apple_log"
         }
       ],
       "rolls": 1.0

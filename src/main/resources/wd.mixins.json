@@ -5,7 +5,9 @@
   "minVersion": "0.8",
   "refmap": "wd_forge.refmap.json",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "HoglinMixin",
+    "AbstractPiglinMixin"
   ],
   "injectors": {
     "defaultRequire": 1

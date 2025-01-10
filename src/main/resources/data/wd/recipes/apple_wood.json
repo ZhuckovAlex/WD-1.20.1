@@ -3,7 +3,7 @@
   "group": "bark",
   "key": {
     "#": {
-      "item": "wizardry_delight:apple_log"
+      "item": "wd:apple_log"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "wizardry_delight:apple_wood"
+    "item": "wd:apple_wood"
   }
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:apple_fence_gate"
+          "name": "wd:apple_fence_gate"
         }
       ],
       "rolls": 1.0

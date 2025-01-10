@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "minecraft:acacia_slab",
+                  "block": "wd:apple_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,7 +25,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "wizardry_delight:apple_slab"
+          "name": "wd:apple_slab"
         }
       ],
       "rolls": 1.0

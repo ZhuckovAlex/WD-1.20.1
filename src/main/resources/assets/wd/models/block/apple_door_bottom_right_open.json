@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/door_bottom_right_open",
   "textures": {
-    "bottom": "wizardry_delight:block/apple_door_bottom",
-    "top": "wizardry_delight:block/apple_door_top"
+    "bottom": "wd:block/apple_door_bottom",
+    "top": "wd:block/apple_door_top"
   },  "render_type": "cutout"
 }

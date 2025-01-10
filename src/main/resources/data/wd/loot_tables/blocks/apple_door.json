@@ -13,14 +13,14 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "wizardry_delight:apple_door",
+              "block": "wd:apple_door",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"
               }
             }
           ],
-          "name": "wizardry_delight:apple_door"
+          "name": "wd:apple_door"
         }
       ],
       "rolls": 1.0

@@ -3,10 +3,10 @@
   "group": "wooden_button",
   "ingredients": [
     {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   ],
   "result": {
-    "item": "wizardry_delight:apple_button"
+    "item": "wd:apple_button"
   }
 }

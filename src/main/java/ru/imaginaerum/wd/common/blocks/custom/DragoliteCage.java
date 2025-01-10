@@ -43,7 +43,17 @@ public class DragoliteCage extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final IntegerProperty SPARKING = IntegerProperty.create("sparking", 0, 5);
     public static final IntegerProperty SOULS = IntegerProperty.create("souls", 0, 2);
-
+    public DragoliteCage(Properties properties) {
+        super(properties);
+        this.registerDefaultState(this.defaultBlockState()
+                .setValue(FACING, Direction.NORTH)
+                .setValue(SPARKING, 0)
+                .setValue(SOULS, 0));
+    }
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, SPARKING, SOULS);
+    }
     public RenderShape getRenderShape(BlockState blockState) {
         return RenderShape.MODEL;
     }
@@ -129,18 +139,9 @@ public class DragoliteCage extends BaseEntityBlock {
         }
     }
 
-    public DragoliteCage(Properties properties) {
-        super(properties);
-        this.registerDefaultState(this.defaultBlockState()
-                .setValue(FACING, Direction.NORTH)
-                .setValue(SPARKING, 0)
-                .setValue(SOULS, 0));
-    }
 
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, SPARKING, SOULS);
-    }
+
+
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource source) {

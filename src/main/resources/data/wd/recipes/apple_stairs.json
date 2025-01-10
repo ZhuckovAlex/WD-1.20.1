@@ -3,7 +3,7 @@
   "group": "wooden_stairs",
   "key": {
     "#": {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "wizardry_delight:apple_stairs"
+    "item": "wd:apple_stairs"
   }
 }

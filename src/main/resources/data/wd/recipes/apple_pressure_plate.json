@@ -3,13 +3,13 @@
   "group": "wooden_pressure_plate",
   "key": {
     "#": {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   },
   "pattern": [
     "##"
   ],
   "result": {
-    "item": "wizardry_delight:apple_pressure_plate"
+    "item": "wd:apple_pressure_plate"
   }
 }

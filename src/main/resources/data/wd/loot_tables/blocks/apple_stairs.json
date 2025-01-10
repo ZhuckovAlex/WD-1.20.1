@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:apple_stairs"
+          "name": "wd:apple_stairs"
         }
       ],
       "rolls": 1.0

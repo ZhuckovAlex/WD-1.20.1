@@ -9,13 +9,20 @@ import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.common.world.ForgeChunkManager;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -32,7 +39,7 @@ import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraArmorStandLayer;
 import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraLayer;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
 import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
-import ru.imaginaerum.wd.common.custom_recipes.BetterBrewingRecipe;
+import ru.imaginaerum.wd.common.custom_recipes.ProperBrewingRecipe;
 import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.entities.ModEntities;
 import ru.imaginaerum.wd.common.items.ItemsWD;
@@ -51,19 +58,17 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WD.MODID)
-public class WD
-{
+public class WD {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "wd";
     // Directly reference a slf4j logger
 
 
-    public WD()
-    {
+    public WD() {
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        if(FMLEnvironment.dist.isClient()) modEventBus.addListener(this::registerElytraLayer);
+        if (FMLEnvironment.dist.isClient()) modEventBus.addListener(this::registerElytraLayer);
         EntityTypeInit.ENTITY_TYPES.register(modEventBus);
         ItemsWD.ITEMS.register(modEventBus);
         ModParticles.PARTICLE_TYPES.register(modEventBus);
@@ -84,51 +89,76 @@ public class WD
             }
         });
     }
-
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+    public static ItemStack createPotion(Potion potion) {
+        return PotionUtils.setPotion(new ItemStack(Items.POTION), potion);
+    }
+    public static ItemStack createSplashPotion(Potion potion) {
+        return PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), potion);
+    }
+    public static ItemStack createLingeringPotion(Potion potion) {
+        return PotionUtils.setPotion(new ItemStack(Items.LINGERING_POTION), potion);
+    }
+    public static ItemStack createItemStack(Item item) {
+        return new ItemStack(item);
+    }
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.WATER)), Ingredient.of(ItemsWD.WARPED_WART.get()), createPotion(Potions.AWKWARD)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.WATER)), Ingredient.of(ItemsWD.WARPED_WART.get()), createSplashPotion(Potions.AWKWARD)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createLingeringPotion(Potions.WATER)), Ingredient.of(ItemsWD.WARPED_WART.get()), createLingeringPotion(Potions.AWKWARD)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.SUGAR_REFINED.get()), createPotion(Potions.STRONG_SWIFTNESS)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.SUGAR_REFINED.get()), createSplashPotion(Potions.STRONG_SWIFTNESS)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createLingeringPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.SUGAR_REFINED.get()), createLingeringPotion(Potions.STRONG_SWIFTNESS)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.HANDFUL_NETHER.get()), createPotion(Potions.STRONG_STRENGTH)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.HANDFUL_NETHER.get()), createSplashPotion(Potions.STRONG_STRENGTH)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createLingeringPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.HANDFUL_NETHER.get()), createLingeringPotion(Potions.STRONG_STRENGTH)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.PEPPER.get()), createPotion(Potions.LONG_FIRE_RESISTANCE)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.PEPPER.get()), createSplashPotion(Potions.LONG_FIRE_RESISTANCE)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createLingeringPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.PEPPER.get()), createLingeringPotion(Potions.LONG_FIRE_RESISTANCE)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.POISON_BERRY.get()), createPotion(Potions.STRONG_POISON)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.POISON_BERRY.get()), createSplashPotion(Potions.STRONG_POISON)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createLingeringPotion(Potions.AWKWARD)), Ingredient.of(ItemsWD.POISON_BERRY.get()), createLingeringPotion(Potions.STRONG_POISON)));
+            BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createItemStack(ItemsWD.HEALING_DEW.get())), Ingredient.of(ItemsWD.HANDFUL_NETHER.get()), createItemStack(ItemsWD.HEALING_DEW_NETHER.get())));
+        });
         DispenserRegistry.registerBehaviors();
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,
-                ItemsWD.WARPED_WART.get(), Potions.AWKWARD));
-
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
 //        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
 //            event.accept(EXAMPLE_BLOCK_ITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
 
     }
 
     @OnlyIn(Dist.CLIENT)
     private void registerElytraLayer(EntityRenderersEvent event) {
-        if(event instanceof EntityRenderersEvent.AddLayers addLayersEvent){
+        if (event instanceof EntityRenderersEvent.AddLayers addLayersEvent) {
             EntityModelSet entityModels = addLayersEvent.getEntityModels();
             addLayersEvent.getSkins().forEach(s -> {
                 LivingEntityRenderer<? extends Player, ? extends EntityModel<? extends Player>> livingEntityRenderer = addLayersEvent.getSkin(s);
-                if(livingEntityRenderer instanceof PlayerRenderer playerRenderer){
+                if (livingEntityRenderer instanceof PlayerRenderer playerRenderer) {
                     playerRenderer.addLayer(new DragoliteElytraLayer(playerRenderer, entityModels));
                 }
             });
             LivingEntityRenderer<ArmorStand, ? extends EntityModel<ArmorStand>> livingEntityRenderer = addLayersEvent.getRenderer(EntityType.ARMOR_STAND);
-            if(livingEntityRenderer instanceof ArmorStandRenderer armorStandRenderer){
+            if (livingEntityRenderer instanceof ArmorStandRenderer armorStandRenderer) {
                 armorStandRenderer.addLayer(new DragoliteElytraArmorStandLayer(armorStandRenderer, entityModels));
             }
 
         }
     }
+
     private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
+
     public static void queueServerWork(int tick, Runnable action) {
         workQueue.add(new AbstractMap.SimpleEntry(action, tick));
     }
+
     @SubscribeEvent
     public void tick(TickEvent.ServerTickEvent event) {
         if (event.phase == TickEvent.Phase.END) {
@@ -142,13 +172,12 @@ public class WD
             workQueue.removeAll(actions);
         }
     }
+
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
 
             EntityRenderers.register(EntityTypeInit.FLAME_ARROW.get(), FlameArrowRenderer::new);
 
@@ -162,6 +191,9 @@ public class WD
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.ROSE_OF_THE_MURDERER.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.MEDICAL_POTATO.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.SPATIAL_ORCHID.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(ItemsWD.APPLE_LEAVES.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(ItemsWD.APPLE_LEAVES_STAGES.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(ItemsWD.APPLE_SAPLING.get(), 0.2f);
 
 
             });

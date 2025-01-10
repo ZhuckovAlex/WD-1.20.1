@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wizardry_delight:apple_planks"
+          "name": "wd:apple_planks"
         }
       ],
       "rolls": 1.0

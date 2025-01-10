@@ -283,6 +283,24 @@ public class ItemsWD {
     // Сюда пишем растения
     public static final RegistryObject<Item> FIRE_STEM = ITEMS.register("fire_stem",
             () -> new ItemNameBlockItem(BlocksWD.FIRE_STEM.get(), (new Item.Properties().fireResistant())));
+
+    //Таблички
+    public static final RegistryObject<Item> APPLE_SIGN = ITEMS.register("apple_sign",
+            () -> new SignItem((new Item.Properties()).stacksTo(16), BlocksWD.APPLE_SIGN.get(),
+                    BlocksWD.APPLE_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> APPLE_HANGING_SIGN = ITEMS.register("apple_hanging_sign",
+            () -> new HangingSignItem(BlocksWD.APPLE_HANGING_SIGN.get(),
+                    BlocksWD.APPLE_WALL_HANGING_SIGN.get(), (new Item.Properties()).stacksTo(16)));
+
+
+    public static final RegistryObject<Item> APPLE_LEAVES = ITEMS.register("apple_leaves",
+            () -> new ItemNameBlockItem(BlocksWD.APPLE_LEAVES.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> APPLE_LEAVES_STAGES = ITEMS.register("apple_leaves_stages",
+            () -> new ItemNameBlockItem(BlocksWD.APPLE_LEAVES_STAGES.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> APPLE_SAPLING = ITEMS.register("apple_sapling",
+            () -> new ItemNameBlockItem(BlocksWD.APPLE_SAPLING.get(), (new Item.Properties())));
+
     public static final RegistryObject<Item> COASTAL_STEEP = ITEMS.register("coastal_steep",
             () -> new ItemNameBlockItem(BlocksWD.COASTAL_STEEP.get(), (new Item.Properties())));
 
@@ -307,6 +325,8 @@ public class ItemsWD {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEALING_DEW = ITEMS.register("healing_dew",
             () -> new HealingDew(new Item.Properties()));
+    public static final RegistryObject<Item> HEALING_DEW_NETHER = ITEMS.register("healing_dew_nether",
+            () -> new HealingDewNether(new Item.Properties()));
 
 
 

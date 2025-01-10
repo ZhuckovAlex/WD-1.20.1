@@ -4,13 +4,18 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.imaginaerum.wd.WD;
+import ru.imaginaerum.wd.common.ModWoodType;
 import ru.imaginaerum.wd.common.blocks.custom.*;
 import ru.imaginaerum.wd.common.items.ItemsWD;
-
+import ru.imaginaerum.wd.common.trees.AppleTreeGrower;
 import java.util.function.Supplier;
 
 public class BlocksWD {
@@ -110,7 +115,79 @@ public class BlocksWD {
 
 
     //Яблоня
+    public static final RegistryObject<Block> APPLE_LOG = registerBlock("apple_log",
+            () -> new StrippedWoodLogs(BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> APPLE_WOOD = registerBlock("apple_wood",
+            () -> new StrippedWoodLogs(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F)
+                    .sound(SoundType.WOOD).ignitedByLava()));
 
+    public static final RegistryObject<Block> STRIPPED_APPLE_LOG = registerBlock("stripped_apple_log",
+            () -> new StrippedWoodLogs(BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlock("stripped_apple_wood",
+            () -> new StrippedWoodLogs(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final RegistryObject<Block> APPLE_PLANKS = registerBlock("apple_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final RegistryObject<Block> APPLE_SIGN = BLOCKS.register("apple_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).noCollission().strength(1.0F).sound(SoundType.CHERRY_WOOD), ModWoodType.APPLE_WOOD));
+    public static final RegistryObject<Block> APPLE_WALL_SIGN = BLOCKS.register("apple_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).noCollission().strength(1.0F).sound(SoundType.CHERRY_WOOD), ModWoodType.APPLE_WOOD));
+    public static final RegistryObject<Block> APPLE_HANGING_SIGN = BLOCKS.register("apple_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F), ModWoodType.APPLE_WOOD));
+    public static final RegistryObject<Block> APPLE_WALL_HANGING_SIGN = BLOCKS.register("apple_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).dropsLike(APPLE_HANGING_SIGN.get()), ModWoodType.APPLE_WOOD));
+
+    public static final RegistryObject<Block> APPLE_LEAVES = BLOCKS.register("apple_leaves",
+            () -> new AppleLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> APPLE_LEAVES_STAGES = BLOCKS.register("apple_leaves_stages",
+            () -> new AppleLeavesStages(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> APPLE_SAPLING = BLOCKS.register("apple_sapling",
+            () -> new SaplingBlock(new AppleTreeGrower() ,BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).noCollission()
+                    .randomTicks().instabreak().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> APPLE_STAIRS = registerBlock("apple_stairs",
+            () -> new StairBlock(APPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(APPLE_PLANKS.get())));
+    public static final RegistryObject<Block> APPLE_SLAB = registerBlock("apple_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> APPLE_FENCE = registerBlock("apple_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().mapColor(APPLE_PLANKS.get().defaultMapColor())
+                    .forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> APPLE_FENCE_GATE = registerBlock("apple_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of().mapColor(APPLE_PLANKS.get()
+                    .defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .ignitedByLava(), ModWoodType.APPLE_WOOD));
+    public static final RegistryObject<Block> APPLE_BUTTON = registerBlock("apple_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY),
+                    BlockSetType.OAK, 10, true));
+    public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = registerBlock("apple_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of()
+                    .mapColor(APPLE_PLANKS.get().defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission()
+                    .strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> APPLE_DOOR = registerBlock("apple_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(APPLE_PLANKS.get()
+                    .defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion()
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
+    public static final RegistryObject<Block> APPLE_TRAPDOOR = registerBlock("apple_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(APPLE_PLANKS.get()
+                            .defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion()
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
     //Метод регистрации блоков
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

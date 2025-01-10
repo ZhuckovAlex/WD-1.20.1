@@ -1,5 +1,16 @@
 {
   "values": [
-
+    "wd:apple_wood",
+    "wd:apple_log",
+    "wd:apple_stairs",
+    "wd:apple_slab",
+    "wd:apple_fence",
+    "wd:apple_fence_gate",
+    "wd:apple_door",
+    "wd:apple_trapdoor",
+    "wd:apple_button",
+    "wd:stripped_apple_wood",
+    "wd:stripped_apple_log",
+    "wd:apple_pressure_plate"
   ]
 }

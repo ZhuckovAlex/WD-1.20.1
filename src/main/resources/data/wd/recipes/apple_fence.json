@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   },
   "pattern": [
@@ -15,6 +15,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "wizardry_delight:apple_fence"
+    "item": "wd:apple_fence"
   }
 }
