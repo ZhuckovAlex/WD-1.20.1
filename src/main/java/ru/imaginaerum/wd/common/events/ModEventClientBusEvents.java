@@ -1,6 +1,8 @@
 package ru.imaginaerum.wd.common.events;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -21,6 +23,7 @@ import ru.imaginaerum.wd.common.blocks.entity.ModBlockEntities;
 import ru.imaginaerum.wd.common.blocks.entity.renderer.DragoliteCageEntityRenderer;
 import ru.imaginaerum.wd.common.items.ItemsWD;
 import ru.imaginaerum.wd.common.items.custom.SoulStone;
+import ru.imaginaerum.wd.common.items.entity.client.ModModelLayersItem;
 import ru.imaginaerum.wd.common.particles.ModParticles;
 import ru.imaginaerum.wd.common.particles.custom.*;
 
@@ -58,6 +61,11 @@ public class ModEventClientBusEvents {
         ItemProperties.register(ItemsWD.SOUL_STONE.get(), new ResourceLocation("charged"),
                 (stack, world, entity, seed) -> stack.getItem() instanceof SoulStone && ((SoulStone) stack.getItem()).isCharged(new ItemStack(ItemsWD.SOUL_STONE.get())) ? 1.0F : 0.0F);
 
+    }
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ModModelLayersItem.APPLE_BOAT_LAYER, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ModModelLayersItem.APPLE_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
     }
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

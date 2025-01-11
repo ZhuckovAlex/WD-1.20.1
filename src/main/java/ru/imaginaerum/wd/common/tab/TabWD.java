@@ -24,6 +24,8 @@ public class TabWD extends CreativeModeTab {
                     .title(Component.translatable("creativetab.wd"))
                     .displayItems((pParameters, pOutput) -> {
                         //Items
+                        pOutput.accept(ItemsWD.MAGIC_HAT.get());
+                        pOutput.accept(ItemsWD.MAGIC_HAT_JAM.get());
                         pOutput.accept(ItemsWD.POISON_BERRY_JAM.get());
                         pOutput.accept(ItemsWD.SWEET_JAM.get());
                         pOutput.accept(ItemsWD.SUGAR_REFINED.get());
@@ -113,6 +115,8 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.APPLE_LEAVES_STAGES.get());
                         pOutput.accept(ItemsWD.APPLE_SIGN.get());
                         pOutput.accept(ItemsWD.APPLE_HANGING_SIGN.get());
+                        pOutput.accept(ItemsWD.APPLE_BOAT.get());
+                        pOutput.accept(ItemsWD.APPLE_CHEST_BOAT.get());
 
                         //Blocks
                         pOutput.accept(BlocksWD.FIRE_STEM.get());

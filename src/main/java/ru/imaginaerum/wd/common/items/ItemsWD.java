@@ -13,9 +13,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.imaginaerum.wd.WD;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
+import ru.imaginaerum.wd.common.items.armor.ModArmorMaterials;
 import ru.imaginaerum.wd.common.items.custom.NetherrackBonemeal;
 import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.items.custom.*;
+import ru.imaginaerum.wd.common.items.entity.ModBoatEntity;
 import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
 
 import java.util.List;
@@ -24,6 +26,12 @@ public class ItemsWD {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, WD.MODID);
 
+
+    // Шляпа/головка Санбердира)))
+    public static final RegistryObject<Item> MAGIC_HAT = ITEMS.register("magic_hat",
+            () -> new MagicHat(ModArmorMaterials.MAGIC, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> MAGIC_HAT_JAM = ITEMS.register("magic_hat_jam",
+            () -> new MagicHatJam(ModArmorMaterials.MAGIC_JAM, ArmorItem.Type.HELMET, new Item.Properties()));
 
     // Тут Варенья и кусты, про что изначально мод
     public static final RegistryObject<Item> POISON_BERRY_JAM = ITEMS.register("poison_berry_jam",
@@ -293,6 +301,10 @@ public class ItemsWD {
             () -> new HangingSignItem(BlocksWD.APPLE_HANGING_SIGN.get(),
                     BlocksWD.APPLE_WALL_HANGING_SIGN.get(), (new Item.Properties()).stacksTo(16)));
 
+    public static final RegistryObject<Item> APPLE_BOAT = ITEMS.register("apple_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.APPLE, new Item.Properties()));
+    public static final RegistryObject<Item> APPLE_CHEST_BOAT = ITEMS.register("apple_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.APPLE, new Item.Properties()));
 
     public static final RegistryObject<Item> APPLE_LEAVES = ITEMS.register("apple_leaves",
             () -> new ItemNameBlockItem(BlocksWD.APPLE_LEAVES.get(), (new Item.Properties())));

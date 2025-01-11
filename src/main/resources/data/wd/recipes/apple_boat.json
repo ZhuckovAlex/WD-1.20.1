@@ -3,7 +3,7 @@
   "group": "boat",
   "key": {
     "#": {
-      "item": "wizardry_delight:apple_planks"
+      "item": "wd:apple_planks"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "###"
   ],
   "result": {
-    "item": "wizardry_delight:apple_boat"
+    "item": "wd:apple_boat"
   }
 }

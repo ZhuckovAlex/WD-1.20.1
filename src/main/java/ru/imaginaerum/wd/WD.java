@@ -28,6 +28,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -35,6 +36,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import ru.imaginaerum.wd.client.ClientProxy;
 import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraArmorStandLayer;
 import ru.imaginaerum.wd.common.armor.elytra.DragoliteElytraLayer;
 import ru.imaginaerum.wd.common.blocks.BlocksWD;
@@ -43,12 +45,16 @@ import ru.imaginaerum.wd.common.custom_recipes.ProperBrewingRecipe;
 import ru.imaginaerum.wd.common.effects.EffectsWD;
 import ru.imaginaerum.wd.common.entities.ModEntities;
 import ru.imaginaerum.wd.common.items.ItemsWD;
+import ru.imaginaerum.wd.common.items.armor.model_layered.WDModelLayers;
 import ru.imaginaerum.wd.common.items.arrows.DispenserRegistry;
 import ru.imaginaerum.wd.common.items.arrows.EntityTypeInit;
 import ru.imaginaerum.wd.common.items.arrows.FlameArrowRenderer;
+import ru.imaginaerum.wd.common.items.entity.ModEntitiesItem;
+import ru.imaginaerum.wd.common.items.entity.client.ModBoatRenderer;
 import ru.imaginaerum.wd.common.particles.ModParticles;
 import ru.imaginaerum.wd.common.sounds.CustomSoundEvents;
 import ru.imaginaerum.wd.common.tab.TabWD;
+import ru.imaginaerum.wd.server.CommonProxy;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -59,16 +65,18 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WD.MODID)
 public class WD {
-    // Define mod id in a common place for everything to reference
+    public static CommonProxy PROXY = DistExecutor.runForDist(() -> ClientProxy::new, () -> CommonProxy::new);
     public static final String MODID = "wd";
     // Directly reference a slf4j logger
 
 
     public WD() {
 
+        PROXY.commonInit();
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         if (FMLEnvironment.dist.isClient()) modEventBus.addListener(this::registerElytraLayer);
+        modEventBus.addListener(this::registerLayerDefinitions);
         EntityTypeInit.ENTITY_TYPES.register(modEventBus);
         ItemsWD.ITEMS.register(modEventBus);
         ModParticles.PARTICLE_TYPES.register(modEventBus);
@@ -79,6 +87,7 @@ public class WD {
         MinecraftForge.EVENT_BUS.register(this);
         CustomSoundEvents.SOUND_EVENTS.register(modEventBus);
         EffectsWD.MOB_EFFECTS.register(modEventBus);
+        ModEntitiesItem.ENTITIES.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         TabWD.CREATIVE_MODE_TABS.register(modEventBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -88,6 +97,9 @@ public class WD {
 
             }
         });
+    }
+    private void registerLayerDefinitions(final EntityRenderersEvent.RegisterLayerDefinitions event) {
+        WDModelLayers.register(event);
     }
     public static ItemStack createPotion(Potion potion) {
         return PotionUtils.setPotion(new ItemStack(Items.POTION), potion);
@@ -101,7 +113,9 @@ public class WD {
     public static ItemStack createItemStack(Item item) {
         return new ItemStack(item);
     }
+
     private void commonSetup(final FMLCommonSetupEvent event) {
+
         event.enqueueWork(() -> {
             BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.WATER)), Ingredient.of(ItemsWD.WARPED_WART.get()), createPotion(Potions.AWKWARD)));
             BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createSplashPotion(Potions.WATER)), Ingredient.of(ItemsWD.WARPED_WART.get()), createSplashPotion(Potions.AWKWARD)));
@@ -178,9 +192,10 @@ public class WD {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            event.enqueueWork(() -> PROXY.clientInit());
             EntityRenderers.register(EntityTypeInit.FLAME_ARROW.get(), FlameArrowRenderer::new);
-
+            EntityRenderers.register(ModEntitiesItem.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            EntityRenderers.register(ModEntitiesItem.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
             event.enqueueWork(() -> {
 
                 ComposterBlock.COMPOSTABLES.put(ItemsWD.FIRE_STEM.get(), 0.2f);

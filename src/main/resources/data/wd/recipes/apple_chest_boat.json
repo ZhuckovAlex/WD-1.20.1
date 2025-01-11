@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "group": "chest_boat",
   "ingredients": [
     {
       "item": "minecraft:chest"
     },
     {
-      "item": "wizardry_delight:apple_boat"
+      "item": "wd:apple_boat"
     }
   ],
   "result": {
-    "item": "wizardry_delight:apple_chest_boat"
+    "item": "wd:apple_chest_boat"
   }
 }

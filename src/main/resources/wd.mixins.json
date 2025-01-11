@@ -9,6 +9,9 @@
     "HoglinMixin",
     "AbstractPiglinMixin"
   ],
+  "client": [
+    "client.HumanoidArmorLayerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

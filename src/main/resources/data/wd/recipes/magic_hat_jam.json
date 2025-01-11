@@ -3,14 +3,14 @@
   "group": "hat_helmet",
   "ingredients": [
     {
-      "item": "wizardry_delight:glowing_jam"
+      "item": "wd:glowing_jam"
     },
     {
-      "item": "wizardry_delight:hat_helmet_clear"
+      "item": "wd:magic_hat"
     }
   ],
   "result": {
-    "item": "wizardry_delight:hat_helmet",
+    "item": "wd:magic_hat_jam",
     "count": 1
   }
 }

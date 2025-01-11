@@ -16,6 +16,7 @@ import ru.imaginaerum.wd.common.items.ItemsWD;
 public class DragoliteElytraLayer
         extends ElytraLayer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> {
 
+
     private static final ResourceLocation TEXTURE_ELYTRA = new ResourceLocation(WD.MODID,
             "textures/entity/nezydra.png");
 
@@ -23,6 +24,7 @@ public class DragoliteElytraLayer
             RenderLayerParent<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> rendererIn,
             EntityModelSet modelSet) {
         super(rendererIn, modelSet);
+
     }
 
     @Override
