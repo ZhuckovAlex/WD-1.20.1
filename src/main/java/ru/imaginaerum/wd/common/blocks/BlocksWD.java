@@ -21,6 +21,9 @@ import java.util.function.Supplier;
 public class BlocksWD {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, WD.MODID);
+
+    public static final RegistryObject<Block> BERRIES_WAFFLES = BLOCKS.register("berries_waffles",
+            () -> new BerriesWaffles(BlockBehaviour.Properties.of().randomTicks().sound(SoundType.WOOL)));
     // Растения
     public static final RegistryObject<Block> FIRE_STEM = BLOCKS.register("fire_stem",
             () -> new FireRod(BlockBehaviour.Properties.of().noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));

@@ -1,6 +1,7 @@
 {
   "variants": {
-    "":
-    {"model": "wd:block/a_block_of_sparkling_pollen"}
+    "": {
+      "model": "wd:block/a_block_of_sparkling_pollen"
+    }
   }
 }

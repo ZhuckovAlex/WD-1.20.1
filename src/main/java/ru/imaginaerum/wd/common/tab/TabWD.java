@@ -117,6 +117,7 @@ public class TabWD extends CreativeModeTab {
                         pOutput.accept(ItemsWD.APPLE_HANGING_SIGN.get());
                         pOutput.accept(ItemsWD.APPLE_BOAT.get());
                         pOutput.accept(ItemsWD.APPLE_CHEST_BOAT.get());
+                        pOutput.accept(ItemsWD.BERRIES_WAFFLES.get());
 
                         //Blocks
                         pOutput.accept(BlocksWD.FIRE_STEM.get());

@@ -43,9 +43,9 @@ public class FireRod extends Block implements net.minecraftforge.common.IPlantab
         return SHAPE;
     }
 
-    public void tick(BlockState p_222543_, ServerLevel p_222544_, BlockPos p_222545_, RandomSource p_222546_) {
-        if (!p_222543_.canSurvive(p_222544_, p_222545_)) {
-            p_222544_.destroyBlock(p_222545_, true);
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource p_222546_) {
+        if (!state.canSurvive(level, pos)) {
+            level.destroyBlock(pos, true);
         }
 
     }
@@ -80,35 +80,45 @@ public class FireRod extends Block implements net.minecraftforge.common.IPlantab
         return super.updateShape(p_57179_, p_57180_, p_57181_, p_57182_, p_57183_, p_57184_);
     }
 
-    public boolean canSurvive(BlockState p_57175_, LevelReader p_57176_, BlockPos p_57177_) {
-        BlockState soil = p_57176_.getBlockState(p_57177_.below());
-        if (soil.canSustainPlant(p_57176_, p_57177_.below(), Direction.UP, this)) return true;
-        BlockState blockstate = p_57176_.getBlockState(p_57177_.below());
-        if (blockstate.is(this)) {
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader world, BlockPos position) {
+        BlockState blockBelow = world.getBlockState(position.below());
+
+        // Проверяем, поддерживает ли блок снизу растения
+        if (blockBelow.canSustainPlant(world, position.below(), Direction.UP, this)) {
             return true;
-        } else {
-            if (blockstate.is(BlockTags.NYLIUM) || blockstate.is(Blocks.NETHERRACK) || blockstate.is(Blocks.GRAVEL) || blockstate.is(Blocks.BASALT) || blockstate.is(Blocks.BLACKSTONE))
-            {
-                BlockPos blockpos = p_57177_.below();
-
-                for(Direction direction : Direction.Plane.HORIZONTAL) {
-                    BlockState blockstate1 = p_57176_.getBlockState(blockpos.relative(direction));
-                    FluidState fluidstate = p_57176_.getFluidState(blockpos.relative(direction));
-                    if ((fluidstate.is(Fluids.LAVA))||((fluidstate.is(Fluids.FLOWING_LAVA)))) {
-                        return true;
-                    }
-                }
-
-            }
-            else if (blockstate.is(Blocks.MAGMA_BLOCK)){
-
-                return true;
-            }
-            return false;
-
         }
 
+        // Если блок ниже такой же, как текущий блок
+        if (blockBelow.is(this)) {
+            return true;
+        }
 
+        // Проверяем, если блок ниже — один из допустимых блоков
+        if (blockBelow.is(BlockTags.NYLIUM) || blockBelow.is(Blocks.NETHERRACK) ||
+                blockBelow.is(Blocks.GRAVEL) || blockBelow.is(Blocks.BASALT) ||
+                blockBelow.is(Blocks.BLACKSTONE)) {
+
+            BlockPos belowPosition = position.below();
+
+            // Проверяем, есть ли лава по горизонтали от текущего блока
+            for (Direction horizontalDirection : Direction.Plane.HORIZONTAL) {
+                BlockState neighborBlock = world.getBlockState(belowPosition.relative(horizontalDirection));
+                FluidState neighborFluid = world.getFluidState(belowPosition.relative(horizontalDirection));
+
+                if (neighborFluid.is(Fluids.LAVA) || neighborFluid.is(Fluids.FLOWING_LAVA)) {
+                    return true;
+                }
+            }
+        }
+
+        // Если блок ниже — магма, возвращаем true
+        if (blockBelow.is(Blocks.MAGMA_BLOCK)) {
+            return true;
+        }
+
+        // В остальных случаях блок не может выжить
+        return false;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_57186_) {

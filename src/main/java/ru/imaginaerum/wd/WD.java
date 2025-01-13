@@ -69,7 +69,6 @@ public class WD {
     public static final String MODID = "wd";
     // Directly reference a slf4j logger
 
-
     public WD() {
 
         PROXY.commonInit();

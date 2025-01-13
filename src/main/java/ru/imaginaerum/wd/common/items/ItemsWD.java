@@ -95,6 +95,8 @@ public class ItemsWD {
             () -> new ItemNameBlockItem(BlocksWD.MEADOW_GOLDEN_FLOWER.get(),(new Item.Properties())));
     public static final RegistryObject<Item> ROSE_OF_GHOSTY_TEARS = ITEMS.register("rose_of_ghosty_tears",
             () -> new ItemNameBlockItem(BlocksWD.ROSE_OF_GHOSTY_TEARS.get(),(new Item.Properties())));
+    public static final RegistryObject<Item> BERRIES_WAFFLES = ITEMS.register("berries_waffles",
+            () -> new ItemNameBlockItem(BlocksWD.BERRIES_WAFFLES.get(),(new Item.Properties())));
     public static final RegistryObject<Item> SPATIAL_ORCHID = ITEMS.register("spatial_orchid",
             () -> new ItemNameBlockItem(BlocksWD.SPATIAL_ORCHID.get(),(new Item.Properties())));
     public static final RegistryObject<Item> CHARMING_BERRIES = ITEMS.register("charming_berries",
